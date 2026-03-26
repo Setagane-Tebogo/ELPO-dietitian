@@ -54,28 +54,70 @@ function closeBookingIfOutside(e) {
   }
 }
 
-/* ── Form Submissions ────────────────────────
-   Replace these functions with real form
-   submission logic (e.g. fetch to an API or
-   a service like Formspree / Netlify Forms).
+/* ── Formspree Configuration ─────────────────
+   Sign up at https://formspree.io, create a
+   new form, and paste your form ID below.
+   It looks like: xyzabcde (8 characters).
    ─────────────────────────────────────────── */
+const FORMSPREE_ID = 'xojpvebz'; // ← Replace this
 
-/* Modal booking form */
-function submitModal() {
-  document.getElementById('modal-form').style.display = 'none';
-  document.getElementById('modal-success').style.display = 'block';
+/* ── Shared Formspree submit helper ──────────
+   Collects all named inputs from a container,
+   posts to Formspree, then shows success or
+   an error message if something goes wrong.
+   ─────────────────────────────────────────── */
+async function sendToFormspree(formEl, submitBtn, onSuccess) {
+  const data = new FormData();
+  formEl.querySelectorAll('[name]').forEach(el => {
+    if (el.value.trim()) data.append(el.name, el.value.trim());
+  });
 
-  /* TODO: Send form data to your backend or email service here.
-     Example with Formspree:
-     const data = new FormData(document.getElementById('modal-form'));
-     fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: data });
-  */
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  try {
+    const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      onSuccess();
+    } else {
+      const json = await res.json();
+      const msg = json.errors ? json.errors.map(e => e.message).join(', ') : 'Submission failed.';
+      alert('Sorry, something went wrong: ' + msg);
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitBtn.dataset.label;
+    }
+  } catch {
+    alert('Network error — please check your connection and try again.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = submitBtn.dataset.label;
+  }
 }
 
-/* Full contact page booking form */
-function submitForm() {
-  document.getElementById('booking-form').style.display = 'none';
-  document.getElementById('success-msg').style.display = 'block';
+/* ── Modal booking form ───────────────────── */
+function submitModal() {
+  const formEl = document.getElementById('modal-form');
+  const btn = formEl.querySelector('.form-submit');
+  btn.dataset.label = btn.textContent;
 
-  /* TODO: Send form data here. Same as above. */
+  sendToFormspree(formEl, btn, () => {
+    formEl.style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
+  });
+}
+
+/* ── Contact page booking form ───────────── */
+function submitForm() {
+  const formEl = document.getElementById('booking-form');
+  const btn = formEl.querySelector('.form-submit');
+  btn.dataset.label = btn.textContent;
+
+  sendToFormspree(formEl, btn, () => {
+    formEl.style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  });
 }
