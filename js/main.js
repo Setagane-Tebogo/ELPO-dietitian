@@ -7,6 +7,23 @@
    - Form submission handlers
    ============================================= */
 
+/* ── Mobile Navigation ───────────────────────
+   Hamburger menu toggle for small screens.
+   ─────────────────────────────────────────── */
+function toggleMobileNav() {
+  const links = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('mobile-open');
+  btn.classList.toggle('open');
+}
+
+function closeMobileNav() {
+  const links = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-hamburger');
+  links.classList.remove('mobile-open');
+  btn.classList.remove('open');
+}
+
 /* ── Page Navigation ─────────────────────────
    Call showPage('home'), showPage('about') etc.
    to switch between pages.

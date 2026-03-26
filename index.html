@@ -23,13 +23,16 @@
      ══════════════════════════════════════════ -->
 <nav>
   <div class="nav-logo" onclick="showPage('home')">Nourish<span>Well</span></div>
-  <div class="nav-links">
-    <a onclick="showPage('home')">Home</a>
-    <a onclick="showPage('about')">About</a>
-    <a onclick="showPage('services')">Services</a>
-    <a onclick="showPage('blog')">Blog</a>
-    <a onclick="showPage('resources')">Resources</a>
-    <a onclick="showPage('contact')" class="nav-cta">Book a Consult</a>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a onclick="showPage('home');closeMobileNav()">Home</a>
+    <a onclick="showPage('about');closeMobileNav()">About</a>
+    <a onclick="showPage('services');closeMobileNav()">Services</a>
+    <a onclick="showPage('blog');closeMobileNav()">Blog</a>
+    <a onclick="showPage('resources');closeMobileNav()">Resources</a>
+    <a onclick="showPage('contact');closeMobileNav()" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -106,10 +109,10 @@
       <p class="section-sub" style="margin:0 auto;text-align:center">Getting started is easy. Every step is designed with your comfort in mind.</p>
     </div>
     <div class="steps-row">
-      <div class="step"><div class="step-num">1</div><h4>Book a consult</h4><p>Fill in the booking form with your health goals and preferred time slot.</p></div>
-      <div class="step"><div class="step-num">2</div><h4>Initial assessment</h4><p>A thorough review of your health history, lifestyle, and nutrition patterns.</p></div>
-      <div class="step"><div class="step-num">3</div><h4>Get your plan</h4><p>Receive a personalised, practical nutrition plan that fits your real life.</p></div>
-      <div class="step"><div class="step-num">4</div><h4>Ongoing support</h4><p>Regular follow-ups and adjustments to keep you on track toward your goals.</p></div>
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Book a consult</h4><p>Fill in the booking form with your health goals and preferred time slot.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Initial assessment</h4><p>A thorough review of your health history, lifestyle, and nutrition patterns.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Get your plan</h4><p>Receive a personalised, practical nutrition plan that fits your real life.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Ongoing support</h4><p>Regular follow-ups and adjustments to keep you on track toward your goals.</p></div></div>
     </div>
   </section>
 

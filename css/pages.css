@@ -255,3 +255,92 @@
   font-size: 1.8rem; color: var(--green-deep); margin-bottom: 0.4rem;
 }
 .booking-card .sub { font-size: 0.88rem; color: var(--text-light); margin-bottom: 2rem; }
+
+/* =============================================
+   pages.css — RESPONSIVE
+   ============================================= */
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  /* About */
+  .about-hero { grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 2rem; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Services */
+  .services-page-hero { padding: 4rem 2rem 3rem; }
+  .services-full { padding: 3rem 2rem; }
+  .service-full-card { grid-template-columns: auto 1fr; }
+  .sfc-price { grid-column: 2; text-align: left; }
+  .pricing-section { padding: 4rem 2rem; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Blog */
+  .blog-hero { padding: 3rem 2rem 2rem; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); padding: 1.5rem 2rem 4rem; }
+
+  /* Resources */
+  .resources-section { padding: 3rem 2rem 4rem; }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
+  .contact-section { gap: 2.5rem; padding: 4rem 2rem; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  /* About */
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.2rem;
+    gap: 2rem;
+  }
+  .about-img-wrap { max-width: 320px; margin: 0 auto; }
+  .values-grid { grid-template-columns: 1fr; }
+  .credentials-row { flex-direction: column; gap: 0.6rem; }
+  .values-section { padding: 2.5rem 1.2rem; }
+
+  /* Services */
+  .services-page-hero { padding: 3rem 1.2rem 2.5rem; }
+  .services-full { padding: 2.5rem 1.2rem; }
+  .service-full-card {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+  .sfc-price { text-align: left; }
+  .pricing-section { padding: 3rem 1.2rem; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+
+  /* Blog */
+  .blog-hero { padding: 2.5rem 1.2rem 1.5rem; }
+  .blog-grid { grid-template-columns: 1fr; padding: 1rem 1.2rem 3rem; gap: 1.2rem; }
+
+  /* Resources */
+  .resources-section { padding: 2.5rem 1.2rem 3rem; }
+  .resources-grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.2rem;
+    min-height: auto;
+  }
+  .contact-info h2 { font-size: 2rem; }
+  .booking-card { padding: 1.8rem 1.2rem; }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 480px) {
+  .about-hero { padding: 2rem 1rem; }
+  .values-section { padding: 2rem 1rem; }
+  .services-page-hero { padding: 2.5rem 1rem 2rem; }
+  .services-full { padding: 2rem 1rem; }
+  .pricing-section { padding: 2.5rem 1rem; }
+  .blog-hero { padding: 2rem 1rem 1rem; }
+  .blog-grid { padding: 1rem 1rem 2.5rem; }
+  .resources-section { padding: 2rem 1rem 2.5rem; }
+  .contact-section { padding: 2rem 1rem; }
+  .booking-card { padding: 1.5rem 1rem; }
+  .service-full-card { padding: 1.2rem 1rem; }
+  .pricing-grid { max-width: 100%; }
+}

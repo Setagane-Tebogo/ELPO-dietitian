@@ -249,3 +249,103 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
 .delay-2 { animation-delay: 0.2s; opacity: 0; }
 .delay-3 { animation-delay: 0.3s; opacity: 0; }
 .delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* =============================================
+   RESPONSIVE — Mobile & Tablet breakpoints
+   ============================================= */
+
+/* ── Hamburger Menu Button ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 110;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green-deep);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Tablet: 768px–1024px ── */
+@media (max-width: 1024px) {
+  nav { padding: 1.2rem 2rem; }
+  section { padding: 4rem 2rem; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .cta-banner { padding: 4rem 2rem; }
+  footer { padding: 3rem 2rem 2rem; }
+}
+
+/* ── Mobile: up to 768px ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.2rem;
+    flex-wrap: wrap;
+  }
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background: rgba(253,250,246,0.98);
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 0 1rem;
+    margin-top: 0.5rem;
+  }
+  .nav-links.mobile-open { display: flex; }
+  .nav-links a {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  .nav-cta {
+    margin: 0.5rem 1.2rem 0;
+    text-align: center;
+    padding: 0.75rem 1.4rem !important;
+  }
+
+  section { padding: 3rem 1.2rem; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  footer { padding: 2.5rem 1.2rem 1.5rem; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .cta-banner { padding: 3rem 1.2rem; }
+  .cta-banner h2 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .modal { padding: 1.8rem 1.2rem; width: 95%; }
+}
+
+/* ── Small mobile: up to 480px ── */
+@media (max-width: 480px) {
+  nav { padding: 0.9rem 1rem; }
+  section { padding: 2.5rem 1rem; }
+  footer { padding: 2rem 1rem 1.2rem; }
+  .cta-banner { padding: 2.5rem 1rem; }
+  .modal { padding: 1.5rem 1rem; }
+}
