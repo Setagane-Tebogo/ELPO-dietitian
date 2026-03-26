@@ -1,0 +1,106 @@
+<!-- =============================================
+   pages/contact.html — Contact page content
+   ============================================= -->
+
+<div class="contact-section">
+  <div class="contact-info">
+    <div class="section-tag">— Get in touch</div>
+    <h2>Let's start your journey</h2>
+    <p>Ready to take control of your nutrition and health? Fill in the booking form and I'll be in touch within 1–2 business days to confirm your appointment.</p>
+
+    <!-- UPDATE: Replace all contact details below -->
+    <div class="contact-detail">
+      <div class="cd-icon">📧</div>
+      <div>
+        <div class="cd-label">Email</div>
+        <div class="cd-val">hello@nourishwell.co.za</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="cd-icon">📱</div>
+      <div>
+        <div class="cd-label">Phone / WhatsApp</div>
+        <div class="cd-val">+27 00 000 0000</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="cd-icon">💻</div>
+      <div>
+        <div class="cd-label">Consultations</div>
+        <div class="cd-val">100% online — South Africa wide</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="cd-icon">⏰</div>
+      <div>
+        <div class="cd-label">Availability</div>
+        <div class="cd-val">Mon–Fri, 8am–5pm</div>
+      </div>
+    </div>
+
+    <!-- Medical aid notice -->
+    <div style="margin-top:2rem;padding:1.5rem;background:var(--green-mist);border-radius:16px;border:1px solid var(--green-pale)">
+      <p style="font-size:0.85rem;color:var(--green-mid);line-height:1.6">
+        <strong>Medical aid clients:</strong> Please mention your medical aid scheme in the form so I can confirm your benefits before your appointment.
+      </p>
+    </div>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="booking-card">
+    <h3>Book a Consultation</h3>
+    <p class="sub">Complete the form below and I'll be in touch shortly.</p>
+
+    <div id="booking-form">
+      <div class="form-row">
+        <div class="form-group"><label>First name</label><input type="text" placeholder="Jane"></div>
+        <div class="form-group"><label>Last name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="jane@email.com">
+      </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" placeholder="+27 81 000 0000">
+      </div>
+      <div class="form-group">
+        <label>Service interested in</label>
+        <!-- UPDATE: Edit these options to match your services -->
+        <select>
+          <option value="">Select a service...</option>
+          <option>Initial Nutrition Consultation</option>
+          <option>IBS Ease &amp; Management Program</option>
+          <option>Medical Aid Weight Management</option>
+          <option>Discovery Vitality Consultation</option>
+          <option>Follow-up Consultation</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Medical aid scheme (if applicable)</label>
+        <!-- UPDATE: Add or remove medical aids as needed -->
+        <select>
+          <option value="">None / Private pay</option>
+          <option>Discovery Health</option>
+          <option>SAMWUMED</option>
+          <option>Polmed</option>
+          <option>Fedhealth</option>
+          <option>Bonitas</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell me about your health goals</label>
+        <textarea placeholder="What would you like to work on? Any specific concerns or conditions?"></textarea>
+      </div>
+      <!-- UPDATE: Connect this to a form handler (Formspree, Netlify, etc.) -->
+      <button class="form-submit" onclick="submitForm()">Send Booking Request →</button>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      <div class="s-icon">🌿</div>
+      <h4>Thank you! I'll be in touch soon.</h4>
+      <p>Your booking request has been received. I'll respond within 1–2 business days to confirm your appointment details.</p>
+    </div>
+  </div>
+</div>
