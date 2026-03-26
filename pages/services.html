@@ -1,0 +1,172 @@
+<!-- =============================================
+   pages/services.html — Services page content
+   ============================================= -->
+
+<section class="services-page-hero">
+  <div class="section-tag">— What I offer</div>
+  <h2 class="section-title">Services &amp; Programs</h2>
+  <p class="section-sub">Personalised nutrition support for every stage of your health journey. All services are delivered online.</p>
+</section>
+
+<section class="services-full">
+  <!-- UPDATE: Edit each service card — name, description, price, and tags -->
+
+  <div class="service-full-card">
+    <div class="sfc-icon">🥗</div>
+    <div class="sfc-content">
+      <h3>Initial Nutrition Consultation</h3>
+      <p>A comprehensive 60-minute session covering your full health history, current diet, lifestyle, and nutrition goals. The foundation of your personalised plan.</p>
+      <div class="sfc-tags">
+        <span class="sfc-tag">60 minutes</span>
+        <span class="sfc-tag">Online</span>
+        <span class="sfc-tag">All conditions</span>
+      </div>
+    </div>
+    <div class="sfc-price">
+      <div class="price-from">From</div>
+      <div class="price-val">R850</div>       <!-- UPDATE price -->
+      <div class="price-period">per session</div>
+      <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="openBooking()">Book</button>
+    </div>
+  </div>
+
+  <div class="service-full-card">
+    <div class="sfc-icon">🔄</div>
+    <div class="sfc-content">
+      <h3>Follow-up Consultation</h3>
+      <p>30–45 minute check-in sessions to review progress, adjust your plan, and provide continued support on your nutrition journey.</p>
+      <div class="sfc-tags">
+        <span class="sfc-tag">30–45 minutes</span>
+        <span class="sfc-tag">Online</span>
+        <span class="sfc-tag">Existing clients</span>
+      </div>
+    </div>
+    <div class="sfc-price">
+      <div class="price-from">From</div>
+      <div class="price-val">R550</div>       <!-- UPDATE price -->
+      <div class="price-period">per session</div>
+      <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="openBooking()">Book</button>
+    </div>
+  </div>
+
+  <div class="service-full-card">
+    <div class="sfc-icon">🫁</div>
+    <div class="sfc-content">
+      <h3>IBS Ease &amp; Management Program</h3>
+      <p>A structured multi-session program using evidence-based strategies including the low FODMAP approach to identify your triggers and restore confidence with food.</p>
+      <div class="sfc-tags">
+        <span class="sfc-tag">6-session program</span>
+        <span class="sfc-tag">Low FODMAP</span>
+        <span class="sfc-tag">Gut health</span>
+      </div>
+    </div>
+    <div class="sfc-price">
+      <div class="price-from">From</div>
+      <div class="price-val">R3500</div>      <!-- UPDATE price -->
+      <div class="price-period">full program</div>
+      <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="openBooking()">Enquire</button>
+    </div>
+  </div>
+
+  <div class="service-full-card">
+    <div class="sfc-icon">⚕️</div>
+    <div class="sfc-content">
+      <h3>Medical Aid Weight Management Program</h3>
+      <p>Nutrition support for members of SAMWUMED, Polmed, Fedhealth and Bonitas weight management programs. Claim back through your medical aid.</p>
+      <div class="sfc-tags">
+        <!-- UPDATE: Add/remove the medical aids you're registered with -->
+        <span class="sfc-tag">Medical aid covered</span>
+        <span class="sfc-tag">SAMWUMED</span>
+        <span class="sfc-tag">Polmed</span>
+        <span class="sfc-tag">Fedhealth</span>
+        <span class="sfc-tag">Bonitas</span>
+      </div>
+    </div>
+    <div class="sfc-price">
+      <div class="price-from">Covered</div>
+      <div class="price-val" style="font-size:1.4rem">Med Aid</div>
+      <div class="price-period">claim from fund</div>
+      <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="openBooking()">Enquire</button>
+    </div>
+  </div>
+
+  <div class="service-full-card">
+    <div class="sfc-icon">💎</div>
+    <div class="sfc-content">
+      <h3>Discovery Vitality Nutrition Consultation</h3>
+      <p>A focused 30-minute session reviewing your eating habits and lifestyle. Earn up to 1,000 Vitality points. Valid for Discovery Health members.</p>
+      <div class="sfc-tags">
+        <span class="sfc-tag">30 minutes</span>
+        <span class="sfc-tag">Discovery Health</span>
+        <span class="sfc-tag">1000 Vitality points</span>
+      </div>
+    </div>
+    <div class="sfc-price">
+      <div class="price-from">Earn up to</div>
+      <div class="price-val" style="font-size:1.4rem">1000 pts</div>
+      <div class="price-period">Vitality points</div>
+      <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="openBooking()">Book</button>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Table -->
+<section class="pricing-section">
+  <div style="text-align:center">
+    <div class="section-tag">— Pricing</div>
+    <h2 class="section-title">Simple, transparent pricing</h2>
+    <p class="section-sub" style="margin:0 auto;text-align:center">All consultations are conducted online. Medical aid claims are facilitated where applicable.</p>
+  </div>
+  <div class="pricing-grid">
+    <!-- UPDATE: Edit plan names, prices, and features -->
+    <div class="pricing-card">
+      <div class="pc-name">Single consult</div>
+      <div class="pc-price">R850</div>
+      <div class="pc-period">Initial consultation (60 min)</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li><span class="check">✓</span> Full health assessment</li>
+        <li><span class="check">✓</span> Personalised nutrition plan</li>
+        <li><span class="check">✓</span> Written summary</li>
+        <li><span class="check">✓</span> Email follow-up</li>
+      </ul>
+      <button class="pc-btn" onclick="openBooking()">Book session</button>
+    </div>
+    <div class="pricing-card featured">
+      <div class="featured-tag">Most popular</div>
+      <div class="pc-name">Starter pack</div>
+      <div class="pc-price">R2100</div>
+      <div class="pc-period">Initial + 2 follow-ups</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li><span class="check">✓</span> Initial consultation</li>
+        <li><span class="check">✓</span> 2 × follow-up sessions</li>
+        <li><span class="check">✓</span> Personalised nutrition plan</li>
+        <li><span class="check">✓</span> Meal ideas &amp; resources</li>
+        <li><span class="check">✓</span> Between-session support</li>
+      </ul>
+      <button class="pc-btn" onclick="openBooking()">Get started</button>
+    </div>
+    <div class="pricing-card">
+      <div class="pc-name">IBS program</div>
+      <div class="pc-price">R3500</div>
+      <div class="pc-period">Full 6-session program</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li><span class="check">✓</span> 6 structured sessions</li>
+        <li><span class="check">✓</span> Low FODMAP guidance</li>
+        <li><span class="check">✓</span> Trigger identification</li>
+        <li><span class="check">✓</span> Recipe &amp; food lists</li>
+        <li><span class="check">✓</span> Ongoing check-ins</li>
+      </ul>
+      <button class="pc-btn" onclick="openBooking()">Enquire now</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <h2>Not sure which service is <em>right for you?</em></h2>
+  <p>Get in touch and I'll help you figure out the best fit for your needs and goals.</p>
+  <button class="btn-primary" onclick="showPage('contact')">Contact Me</button>
+</section>
