@@ -74,6 +74,7 @@ nav {
   transition: background 0.2s !important;
 }
 .nav-cta:hover { background: var(--green-soft) !important; }
+.nav-links a.nav-active { color: var(--green-soft); font-weight: 500; }
 
 /* ── PAGE SWITCHING ── */
 .page { display: none; min-height: 100vh; padding-top: 80px; }
