@@ -65,7 +65,8 @@ body{
 .services-page-hero .section-title { color: var(--cream); margin: 0 auto 1rem; }
 .services-page-hero .section-sub { color: rgba(248,244,238,0.65); margin: 0 auto; text-align: center; }
 
-.services-full { padding: 5rem 5rem; }
+.services-full { padding: 5rem 5rem 4rem;
+width: 100%;}
 .service-full-card {
   display: grid; grid-template-columns: 1fr 2fr auto;
   gap: 2rem; align-items: center;

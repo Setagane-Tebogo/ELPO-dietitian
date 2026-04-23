@@ -38,7 +38,6 @@ body {
   background: var(--warm-white);
   color: var(--text-dark);
   overflow-x: hidden;
-  margin-top: 50px;
 }
 
 /* ── NAV ── */
@@ -103,8 +102,10 @@ nav {
 .nav-links a.nav-active { color: var(--green-soft); font-weight: 500; }
 
 /* ── PAGE SWITCHING ── */
-.page { display: none; min-height: 100vh; padding-top: 80px; }
-.page.active { display: block; }
+.page { display: none; min-height: 100vh; padding-top: 80px;
+ }
+.page.active { display: block;
+ }
 
 /* ── SHARED SECTION STYLES ── */
 section { padding: 6rem 4rem; }
