@@ -11,13 +11,10 @@
   padding: 4rem 4rem 4rem 6rem;
   gap: 4rem;
   position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: -100px; right: -100px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, var(--green-mist) 0%, transparent 70%);
-  pointer-events: none;
+  background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('/Pictures/HomeBackground.png');
+  background-size: cover;
+  margin-top: -60px;
+
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
