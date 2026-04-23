@@ -351,3 +351,69 @@ body{
   .service-full-card { padding: 1.2rem 1rem; }
   .pricing-grid { max-width: 100%; }
 }
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.services-sectionn {
+  background: linear-gradient(135deg, #0f7a5c, #1b9b73);
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+.service-title h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.service-title span {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.service-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .service-row {
+    grid-template-columns: 1fr;
+  }
+
+  .service-title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.services-headerr {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services-headerr h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: rgba(0,0,0,0.2);
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+}
