@@ -13,17 +13,22 @@
 <body>
 
 <nav>
-  <div class="nav-logo" onclick="window.location.href='../index.html'">ELPO<span>Dietitian</span></div>
+  <div class="nav-logo" onclick="window.location.href='../index.html'">
+    <div class="logo-circle">
+      <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo">
+    </div>
+    <span class="logo-tagline">For good health & Long life</span>
+  </div>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="nav-links">
     <a href="../index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html" class="nav-active">Services</a>
-    <a href="blog.html">Blog</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html" class="nav-cta">Book a Consult</a>
+    <a href="/pages/about.html">About</a>
+    <a href="/pages/services.html" class="nav-active">Services</a>
+    <a href="/pages/blog.html">Blog</a>
+    <a href="/pages/resources.html">Resources</a>
+    <a href="/pages/contact.html" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -60,7 +65,7 @@ function closeMobileNav() {
       <div class="price-from">From</div>
       <div class="price-val">R850</div>
       <div class="price-period">per session</div>
-      <a href="contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
     </div>
   </div>
 
@@ -79,7 +84,7 @@ function closeMobileNav() {
       <div class="price-from">From</div>
       <div class="price-val">R550</div>
       <div class="price-period">per session</div>
-      <a href="contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
     </div>
   </div>
 
@@ -98,7 +103,7 @@ function closeMobileNav() {
       <div class="price-from">From</div>
       <div class="price-val">R3500</div>
       <div class="price-period">full program</div>
-      <a href="contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Enquire</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Enquire</button></a>
     </div>
   </div>
 
@@ -119,7 +124,7 @@ function closeMobileNav() {
       <div class="price-from">Covered</div>
       <div class="price-val" style="font-size:1.4rem">Med Aid</div>
       <div class="price-period">claim from fund</div>
-      <a href="contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Enquire</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Enquire</button></a>
     </div>
   </div>
 
@@ -138,7 +143,7 @@ function closeMobileNav() {
       <div class="price-from">Earn up to</div>
       <div class="price-val" style="font-size:1.4rem">1000 pts</div>
       <div class="price-period">Vitality points</div>
-      <a href="contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem">Book</button></a>
     </div>
   </div>
 </section>
@@ -161,7 +166,7 @@ function closeMobileNav() {
         <li><span class="check">✓</span> Written summary</li>
         <li><span class="check">✓</span> Email follow-up</li>
       </ul>
-      <a href="contact.html"><button class="pc-btn">Book session</button></a>
+      <a href="/pages/contact.html"><button class="pc-btn">Book session</button></a>
     </div>
     <div class="pricing-card featured">
       <div class="featured-tag">Most popular</div>
@@ -176,7 +181,7 @@ function closeMobileNav() {
         <li><span class="check">✓</span> Meal ideas & resources</li>
         <li><span class="check">✓</span> Between-session support</li>
       </ul>
-      <a href="contact.html"><button class="pc-btn">Get started</button></a>
+      <a href="/pages/contact.html"><button class="pc-btn">Get started</button></a>
     </div>
     <div class="pricing-card">
       <div class="pc-name">IBS Program</div>
@@ -190,7 +195,7 @@ function closeMobileNav() {
         <li><span class="check">✓</span> Trigger identification</li>
         <li><span class="check">✓</span> Reintroduction guidance</li>
       </ul>
-      <a href="contact.html"><button class="pc-btn">Enquire now</button></a>
+      <a href="/pages/contact.html"><button class="pc-btn">Enquire now</button></a>
     </div>
   </div>
 </section>
@@ -198,20 +203,28 @@ function closeMobileNav() {
 <section class="cta-banner">
   <h2>Ready to get started?</h2>
   <p>Book your initial consultation and take the first step toward better health.</p>
-  <a href="contact.html"><button class="btn-primary">Book a Consultation</button></a>
+  <a href="/pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
 </section>
 
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">ELPO<span>Dietitian</span></div>
-      <p class="footer-desc">Evidence-based nutrition support across South Africa.</p>
+      <div class="footer-logo">
+        <div class="logo-circle" style="width:50px;height:50px">
+          <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <span>ELPO Dietitian</span>
+      </div>
+      <p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p>
+      <p class="logo-tagline" style="margin-top:0.5rem;font-size:0.85rem">For good health & Long life</p>
     </div>
     <div class="footer-col">
       <h4>Pages</h4>
       <a href="../index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-col">
@@ -219,11 +232,13 @@ function closeMobileNav() {
       <a href="services.html">1:1 Consultations</a>
       <a href="services.html">IBS Program</a>
       <a href="services.html">Medical Aid</a>
+      <a href="services.html">Discovery Vitality</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <a>hello@elpodietitian.co.za</a>
       <a>+27 00 000 0000</a>
+      <a>Online — South Africa</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -245,7 +260,7 @@ function closeMobileNav() {
         <li><span class="check">✓</span> Recipe &amp; food lists</li>
         <li><span class="check">✓</span> Ongoing check-ins</li>
       </ul>
-      <button class="pc-btn" onclick="openBooking()">Enquire now</button>
+      <a href="/pages/contact.html"><button class="pc-btn">Enquire now</button></a>
     </div>
   </div>
 </section>
@@ -254,5 +269,5 @@ function closeMobileNav() {
 <section class="cta-banner">
   <h2>Not sure which service is <em>right for you?</em></h2>
   <p>Get in touch and I'll help you figure out the best fit for your needs and goals.</p>
-  <button class="btn-primary" onclick="showPage('contact')">Contact Me</button>
+  <a href="/pages/contact.html"><button class="btn-primary">Contact Me</button></a>
 </section>

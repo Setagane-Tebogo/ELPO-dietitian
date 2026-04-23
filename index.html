@@ -34,12 +34,12 @@
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="nav-links">
-    <a onclick="showPage('home');closeMobileNav()">Home</a>
-    <a onclick="showPage('about');closeMobileNav()">About</a>
-    <a onclick="showPage('services');closeMobileNav()">Services</a>
-    <a onclick="showPage('blog');closeMobileNav()">Blog</a>
-    <a onclick="showPage('resources');closeMobileNav()">Resources</a>
-    <a onclick="showPage('contact');closeMobileNav()" class="nav-cta">Book a Consult</a>
+    <a href="../index.html">Home</a>
+    <a href="/pages/about.html" class="nav-active">About</a>
+    <a href="/pages/services.html">Services</a>
+    <a href="/pages/blog.html">Blog</a>
+    <a href="/pages/resources.html">Resources</a>
+    <a href="/pages/contact.html" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -133,9 +133,14 @@
 
   <footer>
     <div class="footer-grid">
-      <div><div class="footer-logo">ELPO<span>Dietitian</span></div><p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p></div>
-      <div class="footer-col"><h4>Pages</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('blog')">Blog</a><a onclick="showPage('resources')">Resources</a><a onclick="showPage('contact')">Contact</a></div>
-      <div class="footer-col"><h4>Services</h4><a onclick="showPage('services')">1:1 Consultations</a><a onclick="showPage('services')">IBS Program</a><a onclick="showPage('services')">Medical Aid</a><a onclick="showPage('services')">Discovery Vitality</a></div>
+      <div><div class="footer-logo">
+        <div class="logo-circle" style="width:50px;height:50px">
+          <img src="Pictures/Logo.png" alt="ELPO Dietitian Logo" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <span>ELPO Dietitian</span>
+      </div><p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p><p class="logo-tagline" style="margin-top:0.5rem;font-size:0.85rem">For good health & Long life</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="pages/home.html">Home</a><a href="pages/about.html">About</a><a href="pages/services.html">Services</a><a href="pages/blog.html">Blog</a><a href="pages/resources.html">Resources</a><a href="pages/contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Services</h4><a href="pages/services.html">1:1 Consultations</a><a href="pages/services.html">IBS Program</a><a href="pages/services.html">Medical Aid</a><a href="pages/services.html">Discovery Vitality</a></div>
       <div class="footer-col"><h4>Contact</h4><a>hello@elpodietitian.co.za</a><a>+27 00 000 0000</a><a>Online — South Africa</a></div>
     </div>
     <div class="footer-bottom"><p>© 2026 ELPO Dietitian. All rights reserved.</p><p>HPCSA Registered Dietitian</p></div>

@@ -38,6 +38,7 @@ body {
   background: var(--warm-white);
   color: var(--text-dark);
   overflow-x: hidden;
+  margin-top: 50px;
 }
 
 /* ── NAV ── */

@@ -13,17 +13,22 @@
 <body>
 
 <nav>
-  <div class="nav-logo" onclick="window.location.href='index.html'">ELPO<span>Dietitian</span></div>
+  <div class="nav-logo" onclick="window.location.href='../index.html'">
+    <div class="logo-circle">
+      <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo">
+    </div>
+    <span class="logo-tagline">For good health & Long life</span>
+  </div>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="nav-links">
     <a href="../index.html">Home</a>
-    <a href="about.html" class="nav-active">About</a>
-    <a href="services.html">Services</a>
-    <a href="blog.html">Blog</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html" class="nav-cta">Book a Consult</a>
+    <a href="/pages/about.html" class="nav-active">About</a>
+    <a href="/pages/services.html">Services</a>
+    <a href="/pages/blog.html">Blog</a>
+    <a href="/pages/resources.html">Resources</a>
+    <a href="/pages/contact.html" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -59,7 +64,7 @@ function closeMobileNav() {
       <div class="cred-badge">Discovery Vitality Provider</div>
     </div>
     <div style="margin-top:2rem">
-      <a href="contact.html"><button class="btn-primary">Book a Consultation</button></a>
+      <a href="/pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
     </div>
   </div>
 </section>
@@ -106,32 +111,42 @@ function closeMobileNav() {
 <section class="cta-banner">
   <h2>Let's work <em>together</em></h2>
   <p>Book your initial consultation and take the first step toward better health.</p>
-  <a href="contact.html"><button class="btn-primary">Get Started Today</button></a>
+  <a href="/pages/contact.html"><button class="btn-primary">Get Started Today</button></a>
 </section>
 
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">ELPO<span>Dietitian</span></div>
-      <p class="footer-desc">Evidence-based nutrition support across South Africa.</p>
+      <div class="footer-logo">
+        <div class="logo-circle" style="width:50px;height:50px">
+          <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <span>ELPO Dietitian</span>
+      </div>
+      <p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p>
+      <p class="logo-tagline" style="margin-top:0.5rem;font-size:0.85rem">For good health & Long life</p>
     </div>
     <div class="footer-col">
       <h4>Pages</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/services.html">Services</a>
+      <a href="/pages/blog.html">Blog</a>
+      <a href="/pages/resources.html">Resources</a>
+      <a href="/pages/contact.html">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="services.html">1:1 Consultations</a>
-      <a href="services.html">IBS Program</a>
-      <a href="services.html">Medical Aid</a>
+      <a href="/pages/services.html">1:1 Consultations</a>
+      <a href="/pages/services.html">IBS Program</a>
+      <a href="/pages/services.html">Medical Aid</a>
+      <a href="/pages/services.html">Discovery Vitality</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <a>hello@elpodietitian.co.za</a>
       <a>+27 00 000 0000</a>
+      <a>Online — South Africa</a>
     </div>
   </div>
   <div class="footer-bottom">
