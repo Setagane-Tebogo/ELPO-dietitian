@@ -296,20 +296,36 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
   nav {
     padding: 1rem 1.2rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1000;
+    overflow: visible;
   }
-  .nav-hamburger { display: flex; }
+  .nav-hamburger { 
+    display: flex;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 0;
-    background: rgba(253,250,246,0.98);
+    background: rgba(253,250,246, 1);
     border-top: 1px solid var(--border);
     padding: 0.5rem 0 1rem;
     margin-top: 0.5rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  .nav-links.mobile-open { display: flex; }
+  .nav-links.mobile-open { 
+    display: flex !important; 
+  }
   .nav-links a {
     padding: 0.75rem 1.2rem;
     font-size: 0.95rem;
