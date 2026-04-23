@@ -24,17 +24,22 @@
      UPDATE: Change brand name "NourishWell"
      ══════════════════════════════════════════ -->
 <nav>
-  <div class="nav-logo" onclick="window.location.href='index.html'">ELPO<span>Dietitian</span></div>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="logo-circle">
+      <img src="Pictures/Logo.png" alt="ELPO Dietitian Logo">
+    </div>
+    <span class="logo-tagline">For good health & Long life</span>
+  </div>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="nav-links">
-    <a href="index.html">Home</a>
-    <a href="pages/about.html">About</a>
-    <a href="pages/services.html">Services</a>
-    <a href="pages/blog.html">Blog</a>
-    <a href="pages/resources.html">Resources</a>
-    <a href="pages/contact.html" class="nav-cta">Book a Consult</a>
+    <a onclick="showPage('home');closeMobileNav()">Home</a>
+    <a onclick="showPage('about');closeMobileNav()">About</a>
+    <a onclick="showPage('services');closeMobileNav()">Services</a>
+    <a onclick="showPage('blog');closeMobileNav()">Blog</a>
+    <a onclick="showPage('resources');closeMobileNav()">Resources</a>
+    <a onclick="showPage('contact');closeMobileNav()" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -50,8 +55,8 @@
       <h1 class="fade-up delay-1">Food that <em>heals,</em><br>advice that <em>works</em></h1>
       <p class="fade-up delay-2">Evidence-based, personalised nutrition support for real life. No rigid meal plans — just practical guidance tailored to you, your health, and your goals.</p>
       <div class="hero-btns fade-up delay-3">
-        <a href="pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
-        <a href="pages/services.html"><button class="btn-secondary">View Services</button></a>
+        <button class="btn-primary" onclick="openBooking()">Book a Consultation</button>
+        <button class="btn-secondary" onclick="showPage('services')">View Services</button>
       </div>
       <div class="hero-stats fade-up delay-4">
         <div><div class="stat-num">150+</div><div class="stat-label">Clients supported</div></div>
@@ -62,7 +67,7 @@
     <div class="hero-image fade-up delay-2">
       <div class="hero-img-wrap">
         <div class="hero-img-placeholder">
-          <img src="/Pictures/Logo.png" alt="ELPO Dietitian" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+          <img src="LOGO.jpg" alt="ELPO Dietitian" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
         </div>
 
       </div>
@@ -123,21 +128,19 @@
   <section class="cta-banner">
     <h2>Ready to feel <em>better</em> with food?</h2>
     <p>Take the first step toward a healthier, more confident relationship with eating.</p>
-    <a href="pages/contact.html"><button class="btn-primary">Book Your First Consultation</button></a>
+    <button class="btn-primary" onclick="openBooking()">Book Your First Consultation</button>
   </section>
 
   <footer>
     <div class="footer-grid">
       <div><div class="footer-logo">ELPO<span>Dietitian</span></div><p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p></div>
-      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="pages/about.html">About</a><a href="pages/services.html">Services</a><a href="pages/blog.html">Blog</a><a href="pages/resources.html">Resources</a><a href="pages/contact.html">Contact</a></div>
-      <div class="footer-col"><h4>Services</h4><a href="pages/services.html">1:1 Consultations</a><a href="pages/services.html">IBS Program</a><a href="pages/services.html">Medical Aid</a><a href="pages/services.html">Discovery Vitality</a></div>
+      <div class="footer-col"><h4>Pages</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('blog')">Blog</a><a onclick="showPage('resources')">Resources</a><a onclick="showPage('contact')">Contact</a></div>
+      <div class="footer-col"><h4>Services</h4><a onclick="showPage('services')">1:1 Consultations</a><a onclick="showPage('services')">IBS Program</a><a onclick="showPage('services')">Medical Aid</a><a onclick="showPage('services')">Discovery Vitality</a></div>
       <div class="footer-col"><h4>Contact</h4><a>hello@elpodietitian.co.za</a><a>+27 00 000 0000</a><a>Online — South Africa</a></div>
     </div>
     <div class="footer-bottom"><p>© 2026 ELPO Dietitian. All rights reserved.</p><p>HPCSA Registered Dietitian</p></div>
   </footer>
 </div>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>
