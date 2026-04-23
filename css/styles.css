@@ -147,7 +147,7 @@ section { padding: 6rem 4rem; }
 
 /* ── CTA BANNER (shared across pages) ── */
 .cta-banner {
-  background: linear-gradient(135deg, var(--green-mid), var(--green-deep));
+  background: linear-gradient(165deg, var(--green-light), var(--green-mid));
   padding: 5rem 4rem; text-align: center; position: relative; overflow: hidden;
 }
 .cta-banner::before {
