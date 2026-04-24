@@ -372,8 +372,8 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
     display: none;
     flex-direction: column;
     width: 100%;
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     gap: 0;
@@ -484,4 +484,4 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
     text-align: center;
   }
   .hero-btns { flex-direction: column; gap: 0.8rem; }
-}
+
