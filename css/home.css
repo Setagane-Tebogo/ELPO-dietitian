@@ -11,7 +11,7 @@
   padding: 4rem 4rem 4rem 6rem;
   gap: 4rem;
   position: relative; overflow: hidden;
-  background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('/Pictures/HomeBackground.png');
+  background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('../Pictures/HomeBackground.png');
   background-size: cover;
   margin-top: -60px;
 
