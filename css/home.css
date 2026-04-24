@@ -8,13 +8,11 @@
   min-height: calc(100vh - 80px);
   display: grid; grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 4rem 4rem 4rem 6rem;
+  padding: 5rem 4rem 4rem 6rem;
   gap: 4rem;
   position: relative; overflow: hidden;
   background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('../Pictures/HomeBackground.png');
   background-size: cover;
-  margin-top: -60px;
-
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -182,46 +180,168 @@
   .hero {
     grid-template-columns: 1fr 1fr;
     padding: 3rem 2rem;
-    gap: 2.5rem;
+    gap: 2rem;
   }
-  .hero-img-wrap { width: 360px; height: 440px; }
+  .hero-img-wrap { width: 300px; height: 400px; }
+  .hero h1 { font-size: clamp(2.2rem, 4vw, 3rem); }
+  .hero p { font-size: 1rem; max-width: 400px; }
+  .hero-stats { gap: 1.5rem; }
+  .stat-num { font-size: 1.8rem; }
+  
   .services-strip { padding: 3rem 2rem; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps-row { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .service-card { padding: 1.5rem; }
+  
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .testimonial-card { padding: 1.5rem; }
+  
+  .steps-row { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .steps-row::before { display: none; }
 }
 
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 2rem 1.2rem 2.5rem;
-    gap: 2rem;
+    padding: 2rem 1rem 2.5rem;
+    gap: 1.5rem;
     text-align: center;
     min-height: auto;
+    margin-top: 0;
+    background-position: center;
   }
-  .hero-image { order: -1; }
-  .hero-img-wrap { width: 280px; height: 340px; margin: 0 auto; }
-  .hero-float-card { left: 50%; transform: translateX(-50%); bottom: -16px; white-space: nowrap; }
-  .hero p { margin-left: auto; margin-right: auto; }
-  .hero-btns { justify-content: center; }
-  .hero-stats { justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .hero .btn-primary,
+  .hero .btn-secondary {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  .hero-stats {
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+  }
+  .stat-num { font-size: 1.5rem; }
+  .stat-label { font-size: 0.7rem; }
+  
+  .hero-image { order: -1; margin-bottom: 1rem; }
+  .hero-img-wrap {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 140px 140px 120px 120px;
+  }
+  .placeholder-icon { width: 80px; height: 80px; font-size: 2rem; }
+  .placeholder-text { font-size: 0.75rem; }
+  
+  .hero-float-card {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 1rem auto 0;
+    padding: 0.8rem 1rem;
+    white-space: nowrap;
+  }
+  .float-icon { width: 32px; height: 32px; font-size: 1rem; }
+  .float-text { font-size: 0.7rem; }
+  .float-val { font-size: 0.85rem; }
 
-  .services-strip { padding: 2.5rem 1.2rem; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-strip { padding: 2.5rem 1rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .service-card { padding: 1.2rem; }
+  .service-icon { width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 0.8rem; }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .service-card p { font-size: 0.8rem; }
+  .service-card .card-link { font-size: 0.75rem; margin-top: 0.8rem; }
 
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonials-section { padding: 2.5rem 1rem; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .testimonial-card { padding: 1.2rem; }
+  .stars { font-size: 0.8rem; margin-bottom: 0.8rem; }
+  .testimonial-card p { font-size: 0.85rem; margin-bottom: 1rem; }
+  .client-avatar { width: 36px; height: 36px; }
+  .client-name { font-size: 0.85rem; }
+  .client-detail { font-size: 0.72rem; }
 
-  .steps-row { grid-template-columns: 1fr; gap: 1.5rem; }
-  .step { text-align: left; display: flex; align-items: flex-start; gap: 1rem; }
-  .step-num { flex-shrink: 0; margin: 0; }
-  .step-body { flex: 1; }
+  .how-it-works { padding: 2.5rem 1rem; }
+  .steps-row {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .step {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .step h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .step p { font-size: 0.8rem; }
 }
 
 @media (max-width: 480px) {
-  .hero { padding: 1.5rem 1rem 2rem; }
-  .hero-img-wrap { width: 240px; height: 290px; }
-  .services-strip { padding: 2rem 1rem; }
-  .testimonials-section { padding: 2.5rem 1rem; }
-  .how-it-works { padding: 2.5rem 1rem; }
+  .hero { padding: 1.5rem 0.8rem 2rem; }
+  .hero-badge { font-size: 0.65rem; }
+  .hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .hero p { font-size: 0.88rem; }
+  .hero-btns { gap: 0.6rem; }
+  .hero .btn-primary,
+  .hero .btn-secondary { padding: 0.6rem 1rem; font-size: 0.8rem; }
+  .hero-stats { gap: 1rem; }
+  .stat-num { font-size: 1.3rem; }
+  .stat-label { font-size: 0.65rem; }
+  
+  .hero-img-wrap { width: 180px; height: 230px; }
+  .placeholder-icon { width: 60px; height: 60px; font-size: 1.5rem; }
+  .placeholder-text { font-size: 0.7rem; }
+  
+  .hero-float-card { padding: 0.6rem 0.8rem; }
+  .float-icon { width: 28px; height: 28px; font-size: 0.9rem; }
+  .float-text { font-size: 0.65rem; }
+  .float-val { font-size: 0.8rem; }
+
+  .services-strip { padding: 2rem 0.8rem; }
+  .section-tag { font-size: 0.65rem; margin-bottom: 0.5rem; }
+  .section-title { font-size: clamp(1.4rem, 5vw, 1.8rem); }
+  .section-sub { font-size: 0.85rem; }
+  
+  .service-card { padding: 1rem; }
+  .service-icon { width: 36px; height: 36px; font-size: 1.1rem; }
+  .service-card h3 { font-size: 1rem; }
+  .service-card p { font-size: 0.75rem; }
+
+  .testimonials-section { padding: 2rem 0.8rem; }
+  .testimonial-card { padding: 1rem; }
+  .testimonial-card p { font-size: 0.8rem; }
+
+  .how-it-works { padding: 2rem 0.8rem; }
+  .step-num { width: 38px; height: 38px; font-size: 1rem; }
+  .step h4 { font-size: 0.9rem; }
+  .step p { font-size: 0.75rem; }
 }

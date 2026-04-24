@@ -8,7 +8,7 @@ body{
   background: var(--warm-white);
   color: var(--text-dark);
   overflow-x: hidden;
-  margin-top: 100px;
+  margin-top: 0;
 }
 .about-hero {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -59,7 +59,7 @@ body{
 .services-page-hero {
   background: var(--green-deep); padding: 5rem 5rem 4rem;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 0;
 }
 .services-page-hero .section-tag { color: var(--green-light); }
 .services-page-hero .section-title { color: var(--cream); margin: 0 auto 1rem; }
@@ -67,7 +67,7 @@ body{
 
 .services-full { padding: 5rem 5rem 4rem;
 width: 100%;
-background-image: linear-gradient(rgba(90, 90, 90, 0.716), rgba(0, 0, 0, 0.525)), url('/Pictures/ServiceBg.png');
+background-image: linear-gradient(rgba(90, 90, 90, 0.716), rgba(0, 0, 0, 0.525)), url('../Pictures/ServiceBg.png');
   background-size: cover;
 background-position: center;}
 .service-full-card {
@@ -273,87 +273,252 @@ background-position: center;}
 
 /* ── Tablet ── */
 @media (max-width: 1024px) {
+  body { margin-top: 80px; }
+  
   /* About */
-  .about-hero { grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 2rem; }
-  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-hero { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 2.5rem; 
+    padding: 3rem 2rem; 
+  }
+  .about-img-wrap { max-width: 300px; }
+  .about-content .section-sub { margin-bottom: 1rem; }
+  .qual-list { margin: 1rem 0; }
+  .qual-item { padding: 0.6rem 0; font-size: 0.85rem; }
+  .credentials-row { margin-top: 1.5rem; gap: 0.6rem; }
+  .cred-badge { padding: 0.4rem 0.8rem; font-size: 0.72rem; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .value-card { padding: 1.5rem; }
+  .value-card h3 { font-size: 1.1rem; }
+  .value-card p { font-size: 0.8rem; }
 
   /* Services */
-  .services-page-hero { padding: 4rem 2rem 3rem; }
+  .services-page-hero { 
+    padding: 3.5rem 2rem 2.5rem; 
+    margin-top: 100px;
+  }
+  .services-page-hero .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .services-page-hero .section-sub { font-size: 0.95rem; }
   .services-full { padding: 3rem 2rem; }
-  .service-full-card { grid-template-columns: auto 1fr; }
+  .service-full-card { 
+    grid-template-columns: auto 1fr; 
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .sfc-icon { width: 52px; height: 52px; font-size: 1.5rem; }
+  .sfc-content h3 { font-size: 1.2rem; }
+  .sfc-content p { font-size: 0.82rem; }
   .sfc-price { grid-column: 2; text-align: left; }
-  .pricing-section { padding: 4rem 2rem; }
-  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .price-val { font-size: 1.5rem; }
+  .pricing-section { padding: 3rem 2rem; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .pricing-card { padding: 2rem; }
+  .pc-price { font-size: 2.5rem; }
 
   /* Blog */
   .blog-hero { padding: 3rem 2rem 2rem; }
-  .blog-grid { grid-template-columns: repeat(2, 1fr); padding: 1.5rem 2rem 4rem; }
+  .blog-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 1.5rem 2rem 3.5rem; 
+    gap: 1.5rem; 
+  }
+  .blog-img { height: 180px; }
+  .blog-body { padding: 1.2rem; }
+  .blog-card h3 { font-size: 1.1rem; }
+  .blog-card p { font-size: 0.8rem; }
 
   /* Resources */
   .resources-section { padding: 3rem 2rem 4rem; }
-  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .resource-card { padding: 1.5rem; }
+  .resource-card h3 { font-size: 1.05rem; }
+  .resource-card p { font-size: 0.8rem; }
+  .resource-btn { padding: 0.5rem 1rem; font-size: 0.78rem; }
 
   /* Contact */
-  .contact-section { gap: 2.5rem; padding: 4rem 2rem; }
+  .contact-section { 
+    gap: 2rem; 
+    padding: 3.5rem 2rem; 
+  }
+  .contact-info h2 { font-size: 2rem; }
+  .contact-info p { font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .contact-detail { padding: 0.8rem 0; }
+  .cd-icon { width: 36px; height: 36px; }
+  .cd-label { font-size: 0.7rem; }
+  .cd-val { font-size: 0.85rem; }
+  .booking-card { padding: 2rem; }
+  .booking-card h3 { font-size: 1.6rem; }
+  .booking-card .sub { font-size: 0.85rem; margin-bottom: 1.5rem; }
 }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  body { margin-top: 70px; }
+  
   /* About */
   .about-hero {
     grid-template-columns: 1fr;
-    padding: 2.5rem 1.2rem;
-    gap: 2rem;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    text-align: center;
   }
-  .about-img-wrap { max-width: 320px; margin: 0 auto; }
-  .values-grid { grid-template-columns: 1fr; }
-  .credentials-row { flex-direction: column; gap: 0.6rem; }
-  .values-section { padding: 2.5rem 1.2rem; }
+  .about-img-wrap { 
+    max-width: 260px; 
+    margin: 0 auto;
+    aspect-ratio: 3/4;
+  }
+  .about-content { order: -1; }
+  .about-content .section-sub { font-size: 0.9rem; }
+  .qual-list { text-align: left; }
+  .qual-item { font-size: 0.85rem; }
+  .credentials-row { 
+    flex-direction: row; 
+    justify-content: center;
+    gap: 0.5rem; 
+  }
+  .cred-badge { padding: 0.35rem 0.7rem; font-size: 0.68rem; }
+  .values-section { padding: 2.5rem 1rem; }
+  .values-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .value-card { padding: 1.2rem; text-align: left; }
+  .value-card .val-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+  .value-card h3 { font-size: 1.05rem; }
+  .value-card p { font-size: 0.8rem; }
 
   /* Services */
-  .services-page-hero { padding: 3rem 1.2rem 2.5rem; }
-  .services-full { padding: 2.5rem 1.2rem; }
+  .services-page-hero { 
+    padding: 2.5rem 1rem 2rem; 
+    margin-top: 80px;
+  }
+  .services-page-hero .section-tag { font-size: 0.65rem; }
+  .services-page-hero .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .services-page-hero .section-sub { font-size: 0.88rem; }
+  .services-full { padding: 2rem 1rem; }
   .service-full-card {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1.2rem;
   }
-  .sfc-price { text-align: left; }
-  .pricing-section { padding: 3rem 1.2rem; }
-  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .sfc-icon { 
+    width: 44px; 
+    height: 44px; 
+    font-size: 1.3rem; 
+    margin-bottom: 0.3rem;
+  }
+  .sfc-content h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .sfc-content p { font-size: 0.8rem; }
+  .sfc-tags { margin-top: 0.5rem; }
+  .sfc-tag { padding: 0.2rem 0.6rem; font-size: 0.68rem; }
+  .sfc-price { text-align: left; margin-top: 0.5rem; }
+  .price-from { font-size: 0.68rem; }
+  .price-val { font-size: 1.3rem; }
+  .price-period { font-size: 0.68rem; }
+  .pricing-section { padding: 2.5rem 1rem; }
+  .pricing-grid { 
+    grid-template-columns: 1fr; 
+    max-width: 380px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    gap: 1rem;
+  }
+  .pricing-card { padding: 1.5rem; }
+  .pc-name { font-size: 0.75rem; margin-bottom: 0.8rem; }
+  .pc-price { font-size: 2rem; }
+  .pc-period { font-size: 0.75rem; margin-bottom: 1rem; }
+  .pc-divider { margin-bottom: 1rem; }
+  .pc-features { margin-bottom: 1.5rem; }
+  .pc-features li { font-size: 0.8rem; padding: 0.3rem 0; }
+  .pc-btn { padding: 0.7rem; font-size: 0.82rem; }
 
   /* Blog */
-  .blog-hero { padding: 2.5rem 1.2rem 1.5rem; }
-  .blog-grid { grid-template-columns: 1fr; padding: 1rem 1.2rem 3rem; gap: 1.2rem; }
+  .blog-hero { padding: 2rem 1rem 1.5rem; }
+  .blog-grid { 
+    grid-template-columns: 1fr; 
+    padding: 1rem 1rem 2.5rem; 
+    gap: 1rem; 
+  }
+  .blog-img { height: 160px; font-size: 2.5rem; }
+  .blog-category { padding: 0.2rem 0.6rem; font-size: 0.65rem; }
+  .blog-body { padding: 1rem; }
+  .blog-meta { font-size: 0.68rem; margin-bottom: 0.4rem; }
+  .blog-card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+  .blog-card p { font-size: 0.78rem; }
+  .blog-read-more { font-size: 0.75rem; margin-top: 0.6rem; }
 
   /* Resources */
-  .resources-section { padding: 2.5rem 1.2rem 3rem; }
-  .resources-grid { grid-template-columns: 1fr; }
+  .resources-section { padding: 2rem 1rem 2.5rem; }
+  .resources-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .resource-card { padding: 1.2rem; }
+  .resource-type { 
+    padding: 0.2rem 0.6rem; 
+    font-size: 0.65rem; 
+    margin-bottom: 0.6rem;
+  }
+  .resource-card h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+  .resource-card p { font-size: 0.78rem; }
+  .resource-btn { 
+    margin-top: 1rem; 
+    padding: 0.5rem 0.9rem; 
+    font-size: 0.75rem; 
+  }
 
   /* Contact */
   .contact-section {
     grid-template-columns: 1fr;
-    padding: 2.5rem 1.2rem;
+    padding: 2rem 1rem;
     min-height: auto;
+    gap: 1.5rem;
   }
-  .contact-info h2 { font-size: 2rem; }
-  .booking-card { padding: 1.8rem 1.2rem; }
+  .contact-info { text-align: center; }
+  .contact-info h2 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .contact-info p { font-size: 0.88rem; margin-bottom: 1.5rem; }
+  .contact-detail { justify-content: center; }
+  .cd-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+  .cd-label { font-size: 0.65rem; }
+  .cd-val { font-size: 0.85rem; }
+  .booking-card { padding: 1.5rem 1.2rem; }
+  .booking-card h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .booking-card .sub { font-size: 0.82rem; margin-bottom: 1.2rem; }
 }
 
 /* ── Small mobile ── */
 @media (max-width: 480px) {
-  .about-hero { padding: 2rem 1rem; }
-  .values-section { padding: 2rem 1rem; }
-  .services-page-hero { padding: 2.5rem 1rem 2rem; }
-  .services-full { padding: 2rem 1rem; }
-  .pricing-section { padding: 2.5rem 1rem; }
-  .blog-hero { padding: 2rem 1rem 1rem; }
-  .blog-grid { padding: 1rem 1rem 2.5rem; }
-  .resources-section { padding: 2rem 1rem 2.5rem; }
-  .contact-section { padding: 2rem 1rem; }
-  .booking-card { padding: 1.5rem 1rem; }
-  .service-full-card { padding: 1.2rem 1rem; }
-  .pricing-grid { max-width: 100%; }
+  body { margin-top: 60px; }
+  
+  .about-hero { padding: 1.5rem 0.8rem; }
+  .about-img-wrap { max-width: 200px; }
+  .about-content .section-sub { font-size: 0.85rem; }
+  .qual-item { font-size: 0.8rem; }
+  .cred-badge { padding: 0.3rem 0.6rem; font-size: 0.62rem; }
+  .values-section { padding: 1.5rem 0.8rem; }
+  .value-card { padding: 1rem; }
+  
+  .services-page-hero { padding: 2rem 0.8rem 1.5rem; }
+  .services-full { padding: 1.5rem 0.8rem; }
+  .service-full-card { padding: 1rem 0.8rem; }
+  .sfc-icon { width: 38px; height: 38px; font-size: 1.1rem; }
+  .sfc-content h3 { font-size: 1rem; }
+  .sfc-content p { font-size: 0.75rem; }
+  .pricing-section { padding: 2rem 0.8rem; }
+  .pricing-card { padding: 1.2rem; }
+  .pc-price { font-size: 1.8rem; }
+  
+  .blog-hero { padding: 1.5rem 0.8rem 1rem; }
+  .blog-grid { padding: 0.8rem 0.8rem 2rem; }
+  .blog-img { height: 140px; font-size: 2rem; }
+  .blog-body { padding: 0.8rem; }
+  .blog-card h3 { font-size: 0.95rem; }
+  
+  .resources-section { padding: 1.5rem 0.8rem 2rem; }
+  .resource-card { padding: 1rem; }
+  .resource-card h3 { font-size: 0.95rem; }
+  .resource-card p { font-size: 0.75rem; }
+  
+  .contact-section { padding: 1.5rem 0.8rem; }
+  .contact-info h2 { font-size: 1.5rem; }
+  .contact-info p { font-size: 0.82rem; }
+  .booking-card { padding: 1.2rem 0.8rem; }
+  .booking-card h3 { font-size: 1.2rem; }
+  .booking-card .sub { font-size: 0.78rem; }
 }
 
 .services-container {
