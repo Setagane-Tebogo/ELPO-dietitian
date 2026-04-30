@@ -291,10 +291,7 @@ background-position: center;}
   .value-card p { font-size: 0.8rem; }
 
   /* Services */
-  .services-page-hero { 
-    padding: 3.5rem 2rem 2.5rem; 
-    margin-top: 100px;
-  }
+  .services-page-hero { padding: 3.5rem 2rem 2.5rem; }
   .services-page-hero .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); }
   .services-page-hero .section-sub { font-size: 0.95rem; }
   .services-full { padding: 3rem 2rem; }
@@ -378,10 +375,7 @@ background-position: center;}
   .value-card p { font-size: 0.8rem; }
 
   /* Services */
-  .services-page-hero { 
-    padding: 2.5rem 1rem 2rem; 
-    margin-top: 80px;
-  }
+  .services-page-hero { padding: 2.5rem 1rem 2rem; }
   .services-page-hero .section-tag { font-size: 0.65rem; }
   .services-page-hero .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
   .services-page-hero .section-sub { font-size: 0.88rem; }
@@ -597,3 +591,23 @@ background-position: center;}
 .social-btn.instagram { background: linear-gradient(90deg,#f58529,#de1f7a); }
 .social-btn.tiktok { background: linear-gradient(90deg,#00f2ea,#000000); }
 .social-btn:focus,.social-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+
+/* ── Map Section ── */
+.map-section {
+  padding: 5rem 6rem;
+  background: var(--warm-white);
+  text-align: center;
+}
+.map-container {
+  margin-top: 2.5rem;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 40px rgba(26,58,42,0.1);
+  height: 450px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .map-section { padding: 3rem 1rem; }
+  .map-container { height: 350px; border-radius: 16px; margin-top: 1.5rem; }
+}
