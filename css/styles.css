@@ -53,7 +53,7 @@ nav {
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem; 
+  font-size: 1.6rem; 
   font-weight: 700;
   color: var(--green-deep);
   cursor: pointer;
@@ -63,8 +63,8 @@ nav {
   flex-shrink: 0;
 }
 .logo-circle {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,10 +77,10 @@ nav {
 }
 .logo-tagline {
   font-size: 1.1rem;
-  color: rgb(203, 0, 0);
+  color: var(--green-soft);
   font-style: italic;
   line-height: 1.2;
-  max-width: 180px;
+  max-width: 220px;
 }
 .nav-logo span { color: var(--green-soft); font-style: italic; }
 .nav-links { display: flex; gap: 2.5rem; align-items: center; }
@@ -102,7 +102,7 @@ nav {
 .nav-links a.nav-active { color: var(--green-soft); font-weight: 500; }
 
 /* ── PAGE SWITCHING ── */
-.page { display: none; min-height: 100vh; padding-top: 80px; }
+.page { display: none; min-height: 100vh; padding-top: 0; }
 .page.active { display: block; }
 
 /* ── SHARED SECTION STYLES ── */
@@ -132,6 +132,8 @@ section { padding: 5rem 4rem; }
   border: none; transition: all 0.25s; letter-spacing: 0.02em;
   text-decoration: none; display: inline-block;
   font-family: 'DM Sans', sans-serif;
+  max-width: 260px;
+  width: auto;
 }
 .btn-primary:hover { background: var(--green-soft); transform: translateY(-1px); }
 .btn-secondary {
@@ -141,8 +143,19 @@ section { padding: 5rem 4rem; }
   border: 1.5px solid var(--green-pale); transition: all 0.25s;
   text-decoration: none; display: inline-block;
   font-family: 'DM Sans', sans-serif;
+  max-width: 260px;
+  width: auto;
 }
 .btn-secondary:hover { border-color: var(--green-soft); color: var(--green-soft); }
+
+/* Center buttons used inside page content (keep nav buttons untouched) */
+.page .btn-primary,
+.page .btn-secondary,
+.page .form-submit {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* ── CTA BANNER (shared across pages) ── */
 .cta-banner {
@@ -164,6 +177,21 @@ section { padding: 5rem 4rem; }
 .cta-banner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1rem; }
 .cta-banner .btn-primary { background: var(--cream); color: var(--green-deep); font-size: 1rem; padding: 1rem 2.5rem; }
 .cta-banner .btn-primary:hover { background: white; }
+
+/* Make CTA button wider on desktop, full-width on small screens */
+.cta-banner .btn-primary {
+  min-width: 340px;
+  max-width: 520px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .cta-banner .btn-primary {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
 
 /* ── FOOTER (shared across pages) ── */
 footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
@@ -319,14 +347,14 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
   footer { padding: 2.5rem 2rem 2rem; }
   
   /* Logo adjustments */
-  .logo-circle { width: 50px; height: 50px; }
-  .logo-tagline { display: none; }
-  .nav-logo { font-size: 1.2rem; }
+  .logo-circle { width: 64px; height: 64px; }
+  .logo-tagline { display: block; font-size: 1rem; }
+  .nav-logo { font-size: 1.3rem; }
 }
 
 /* ── Mobile: up to 768px ── */
 @media (max-width: 768px) {
-  .page { padding-top: 60px; }
+  .page { padding-top: 0; }
   nav {
     padding: 0.6rem 1rem;
     flex-wrap: wrap;
@@ -338,9 +366,9 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
     min-height: 60px;
   }
   .nav-logo { gap: 6px; }
-  .logo-circle { width: 40px; height: 40px; }
-  .logo-tagline { display: none; }
-  .nav-logo { font-size: 1rem; }
+  .logo-circle { width: 56px; height: 56px; }
+  .logo-tagline { display: block; font-size: 0.95rem; }
+  .nav-logo { font-size: 1.15rem; }
   
   .nav-hamburger { 
     display: flex !important;
@@ -400,7 +428,7 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
     padding: 0.7rem 1.2rem !important;
   }
 
-  section { padding: 2.5rem 1rem; }
+  section { padding: 1.25rem 1rem; }
   .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
   .section-sub { font-size: 0.92rem; max-width: 100%; }
 
@@ -442,6 +470,36 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
   }
 }
 
+/* On desktop/tablet make form submit constrained and buttons keep a sensible max width */
+@media (min-width: 769px) {
+  .page .btn-primary,
+  .page .btn-secondary {
+    display: inline-block;
+    margin: 0;
+    max-width: 260px;
+  }
+  .page .form-submit {
+    width: auto;
+    max-width: 320px;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+/* Center buttons on small devices only */
+@media (max-width: 768px) {
+  .page .btn-primary,
+  .page .btn-secondary,
+  .page .form-submit {
+    display: block;
+    margin: 0.6rem auto;
+    text-align: center;
+  }
+  .cta-banner {
+    text-align: center;
+  }
+}
+
 /* ── Small mobile: up to 480px ── */
 @media (max-width: 480px) {
   nav { 
@@ -454,7 +512,7 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
   .nav-hamburger { right: 0.6rem; padding: 3px; }
   .nav-hamburger span { width: 18px; }
   
-  .page { padding-top: 55px; }
+  .page { padding-top: 0; }
   section { padding: 1.5rem 0.8rem; }
 }
   
@@ -481,7 +539,8 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
     width: 100%;
-    text-align: center;
+    margin: 0.6rem auto; /* Center block buttons */
   }
   .hero-btns { flex-direction: column; gap: 0.8rem; }
 
+/* Removed conflicting centering rules */

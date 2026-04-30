@@ -34,6 +34,18 @@
   line-height: 1.8; margin-bottom: 2.5rem; max-width: 480px;
 }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-btns { justify-content: flex-start; }
+/* Ensure elements that trigger page navigation remain left-aligned on larger screens
+   (mobile centering is handled in the max-width media queries) */
+@media (min-width: 769px) {
+  /* Keep page navigation and booking triggers left-aligned on desktop */
+  #page-home [onclick*="showPage"],
+  #page-home [onclick*="openBooking"],
+  #page-home .btn-primary, #page-home .btn-secondary {
+    display: inline-block;
+    margin: 0;
+  }
+}
 .hero .btn-secondary {
   color: var(--cream);
   border-color: rgba(255, 255, 255, 0.3);
@@ -260,6 +272,26 @@
     margin: 1rem auto 0;
     padding: 0.8rem 1rem;
     white-space: nowrap;
+  }
+  /* Center buttons only on the index (home) page for small screens */
+  #page-home .btn-primary,
+  #page-home .btn-secondary,
+  #page-home .form-submit,
+  #page-home .elpo-cta-btn,
+  #page-home .resource-btn {
+    display: block;
+    margin: 0.6rem auto;
+  }
+  /* But keep the hero buttons left-aligned on all sizes */
+  #page-home .hero-btns .btn-primary,
+  #page-home .hero-btns .btn-secondary {
+    display: inline-block;
+    margin: 0;
+  }
+  /* Keep the services-strip action on the left as well */
+  .services-strip .btn-secondary {
+    display: inline-block !important;
+    margin: 0 !important;
   }
   .float-icon { width: 32px; height: 32px; font-size: 1rem; }
   .float-text { font-size: 0.7rem; }
