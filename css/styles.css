@@ -102,7 +102,7 @@ nav {
 .nav-links a.nav-active { color: var(--green-soft); font-weight: 500; }
 
 /* ── PAGE SWITCHING ── */
-.page { display: none; min-height: 100vh; padding-top: 0; }
+.page { display: none; min-height: 100vh; padding-top: 80px; /* Space for fixed nav */ }
 .page.active { display: block; }
 
 /* ── SHARED SECTION STYLES ── */
@@ -512,7 +512,7 @@ footer { background: var(--green-deep); padding: 4rem 4rem 2rem; }
   .nav-hamburger { right: 0.6rem; padding: 3px; }
   .nav-hamburger span { width: 18px; }
   
-  .page { padding-top: 0; }
+  .page { padding-top: 55px; /* Space for fixed nav on small mobile */ }
   section { padding: 1.5rem 0.8rem; }
 }
   
