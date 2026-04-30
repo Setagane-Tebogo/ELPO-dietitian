@@ -289,6 +289,54 @@ background-position: center;}
   .value-card { padding: 1.5rem; }
   .value-card h3 { font-size: 1.1rem; }
   .value-card p { font-size: 0.8rem; }
+  .map-container {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: #ffffff;
+    }
+    #d-link{
+        display: inline-block;
+        background-color: #1a4a83;
+        color: white;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .map-container h2 {
+        color: #1a4a83; /* Matching the blue in your image */
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .map-card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Adds that depth effect */
+        margin-bottom: 25px;
+        line-height: 0; /* Removes bottom gap */
+    }
+
+    .directions-btn {
+        display: inline-block;
+        background-color: #1a4a83;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .directions-btn:hover {
+        background-color: #12345d;
+    }
 
   /* Services */
   .services-page-hero { padding: 3.5rem 2rem 2.5rem; }
