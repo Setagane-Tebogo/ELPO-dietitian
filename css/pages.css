@@ -39,7 +39,22 @@ body{
   border-radius: 8px; padding: 0.5rem 1rem;
   font-size: 0.78rem; color: var(--green-mid); font-weight: 500;
 }
-.values-section { background: var(--cream); }
+.values-section {
+  position: relative;
+  padding: 5rem 6rem;
+  background-image: linear-gradient(rgba(10,20,15,0.12), rgba(10,20,15,0.12)), url('../Pictures/aboutBg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.values-section > *,
+.values-section .values-grid {
+  position: relative;
+  z-index: 1;
+}
 .values-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem; margin-top: 3rem;
