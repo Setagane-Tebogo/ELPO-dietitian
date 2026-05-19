@@ -40,28 +40,28 @@
     <p>Ready to take control of your nutrition and health? Fill in the booking form and I'll be in touch within 1–2 business days to confirm your appointment.</p>
 
     <div class="contact-detail">
-      <div class="cd-icon">📧</div>
+      <div class="cd-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
       <div>
         <div class="cd-label">Email</div>
-        <div class="cd-val">hello@elpodietitian.co.za</div>
+        <div class="cd-val">info@elpodietitian.co.za</div>
       </div>
     </div>
     <div class="contact-detail">
-      <div class="cd-icon">📱</div>
+      <div class="cd-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
       <div>
         <div class="cd-label">Phone / WhatsApp</div>
         <div class="cd-val">+27 74 802 4088</div>
       </div>
     </div>
     <div class="contact-detail">
-      <div class="cd-icon">💻</div>
+      <div class="cd-icon"><i class="fa-solid fa-laptop" aria-hidden="true"></i></div>
       <div>
         <div class="cd-label">Consultations</div>
-        <div class="cd-val">100% online — South Africa wide</div>
+        <div class="cd-val">In Person</div>
       </div>
     </div>
     <div class="contact-detail">
-      <div class="cd-icon">⏰</div>
+      <div class="cd-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
       <div>
         <div class="cd-label">Availability</div>
         <div class="cd-val">Mon–Fri, 8am–5pm</div>
@@ -70,7 +70,6 @@
 
     <div style="margin-top:2rem;padding:1.5rem;background:var(--green-mist);border-radius:16px;border:1px solid var(--green-pale)">
       <p style="font-size:0.85rem;color:var(--green-mid);line-height:1.6">
-        <strong>Medical aid clients:</strong> Please mention your medical aid scheme in the form so I can confirm your benefits before your appointment.
       </p>
     </div>
   </div>
@@ -115,6 +114,19 @@
           <option>Other</option>
         </select>
       </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred appointment date</label>
+          <input type="date" id="appointment_date" name="appointment_date" required>
+        </div>
+        <div class="form-group">
+          <label>Preferred time</label>
+          <select id="appointment_time" name="appointment_time" required>
+            <option value="">Select a date first</option>
+          </select>
+        </div>
+      </div>
+      <p class="form-note" id="hours-note" style="font-size:0.85rem;color:var(--text-light);margin-bottom:0.75rem">Opening Hours: Mon–Thu 09:00–18:00, Fri 09:00–16:00, Sun 09:00–15:00</p>
       <div class="form-group">
         <label>Tell me about your health goals</label>
         <textarea name="message" placeholder="What would you like to work on? Any specific concerns or conditions?" rows="4"></textarea>
@@ -156,6 +168,69 @@
     <p>HPCSA Registered Dietitian</p>
   </div>
 </footer>
+
+<script>
+// Populate appointment time slots based on opening hours
+(function(){
+  const opening = {
+    0: {start: '09:00', end: '15:00'}, // Sunday
+    1: {start: '09:00', end: '18:00'}, // Monday
+    2: {start: '09:00', end: '18:00'}, // Tuesday
+    3: {start: '09:00', end: '18:00'}, // Wednesday
+    4: {start: '09:00', end: '18:00'}, // Thursday
+    5: {start: '09:00', end: '16:00'}, // Friday
+    6: null // Saturday closed
+  };
+
+  const dateInput = document.getElementById('appointment_date');
+  const timeSelect = document.getElementById('appointment_time');
+  const note = document.getElementById('hours-note');
+  if(!dateInput || !timeSelect) return;
+
+  const today = new Date();
+  dateInput.min = today.toISOString().split('T')[0];
+
+  function pad(n){return String(n).padStart(2,'0');}
+
+  function generateSlots(start, end, intervalMinutes=30){
+    const [sh, sm] = start.split(':').map(Number);
+    const [eh, em] = end.split(':').map(Number);
+    const slots = [];
+    const curr = new Date(); curr.setHours(sh, sm, 0, 0);
+    const endDate = new Date(); endDate.setHours(eh, em, 0, 0);
+    while(curr.getTime() <= endDate.getTime() - intervalMinutes*60000){
+      slots.push(pad(curr.getHours()) + ':' + pad(curr.getMinutes()));
+      curr.setMinutes(curr.getMinutes() + intervalMinutes);
+    }
+    return slots;
+  }
+
+  function updateTimes(){
+    const val = dateInput.value;
+    timeSelect.innerHTML = '';
+    if(!val){ timeSelect.disabled = true; timeSelect.innerHTML = '<option value="">Select a date first</option>'; return; }
+
+    const d = new Date(val + 'T00:00');
+    const dow = d.getDay();
+    const hours = opening[dow];
+    if(!hours){
+      timeSelect.disabled = true;
+      timeSelect.innerHTML = '<option value="">Closed on selected day</option>';
+      note.textContent = 'Closed on selected day. Opening Hours: Mon–Thu 09:00–18:00, Fri 09:00–16:00, Sun 09:00–15:00.';
+      return;
+    }
+
+    note.textContent = 'Available times for selected date.';
+    const slots = generateSlots(hours.start, hours.end, 30);
+    const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = 'Select a time'; timeSelect.appendChild(placeholder);
+    slots.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; timeSelect.appendChild(o); });
+    timeSelect.disabled = false;
+  }
+
+  dateInput.addEventListener('change', updateTimes);
+  if(dateInput.value) updateTimes();
+})();
+</script>
 
 </body>
 </html>
