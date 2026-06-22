@@ -121,6 +121,56 @@ function submitForm() {
   });
 }
 
+/* ── Contact Options Modal ───────────────────
+   Shows two simple choices when user clicks "Contact Me":
+   - Open email client (mailto:)
+   - Open WhatsApp chat (wa.me)
+──────────────────────────────────────────── */
+function showContactOptions(opts = {}) {
+  // opts: { email, phone, message }
+  const email = (opts.email || 'elpodietitians@gmail.com').trim();
+  const phone = (opts.phone || '+27786862287').replace(/\D/g,'');
+  const message = encodeURIComponent(opts.message || 'Hello, I would like to enquire about your services.');
+
+  // create overlay if missing
+  let overlay = document.getElementById('contact-options-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'contact-options-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:1000;';
+    overlay.innerHTML = `
+      <div style="width:320px;max-width:94%;background:white;border-radius:12px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,0.25);">
+        <h3 style="margin:0 0 8px;font-family:inherit">Contact options</h3>
+        <p style="margin:0 0 12px;color:#333">Choose how you'd like to get in touch.</p>
+        <div style="display:flex;gap:10px;flex-direction:column;">
+          <a id="contact-email-btn" href="mailto:${email}?subject=Service%20Enquiry&body=${message}" style="text-decoration:none;" class="btn-primary">Send an email</a>
+          <a id="contact-whatsapp-btn" href="https://wa.me/${phone}?text=${message}" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Contact on WhatsApp</a>
+        </div>
+        <button id="contact-options-close" style="margin-top:12px;background:transparent;border:none;color:#666;display:block;margin-left:auto;">Close</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeContactOptions();
+    });
+    document.getElementById('contact-options-close').addEventListener('click', closeContactOptions);
+    document.addEventListener('keydown', function escHandler(e){ if (e.key==='Escape') closeContactOptions(); }, { once:false });
+  } else {
+    // update links
+    const emailBtn = document.getElementById('contact-email-btn');
+    const waBtn = document.getElementById('contact-whatsapp-btn');
+    if (emailBtn) emailBtn.href = `mailto:${email}?subject=Service%20Enquiry&body=${message}`;
+    if (waBtn) waBtn.href = `https://wa.me/${phone}?text=${message}`;
+  }
+  overlay.style.display = 'flex';
+}
+
+function closeContactOptions() {
+  const overlay = document.getElementById('contact-options-overlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
 /* ── Init ─────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function () {
   const navPageMap = {
