@@ -1,690 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | ELPO Dietitian</title>
- 
-
-<meta name="description"
-content="Professional dietitian services focused on healthy eating, nutrition guidance, wellness plans, and personalized dietary support for a healthier lifestyle.">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../css/pages.css">
+  <meta
+    name="description"
+    content="Professional dietitian services focused on healthy eating, nutrition guidance, wellness plans, and personalized dietary support for a healthier lifestyle."
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/promos.css" />
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo" onclick="window.location.href='../index.html'">
-    <div class="logo-circle">
-      <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo">
-    </div>
-    <span class="logo-tagline">For good health & Long life</span>
-  </div>
-  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-links" id="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../pages/about.html">About</a>
-    <a href="../pages/services.html" class="nav-active">Services</a>
-    <a href="../pages/blog.html">Blog</a>
-    <a href="#" onclick="showContactOptions();return false;" class="nav-cta">Book a Consult</a>
-  </div>
-</nav>
-
-<script src="../js/main.js"></script>
-
-<section class="services-page-hero">
-  <div class="section-tag">What I offer</div>
-  <h2 class="section-title">Services & Programs</h2>
-  <p class="section-sub">Personalised nutrition support for every stage of your health journey. All services are delivered online.</p>
-</section>
-
-<section class="services-full">
-
-  <div class="services-sectionn">
-
-    <div class="services-headerr">
-      <h1>Our Services</h1>
-      <p>At our practice, we provide evidence-based nutrition care tailored to your individual health needs and lifestyle goals.</p>
-    </div>
-
-    <div class="service-block">
-      <h2>Chronic Disease Management</h2>
-      <p>Nutrition plays a key role in preventing and managing chronic conditions. We offer personalised dietary guidance for:</p>
-      <ul>
-        <li>Diabetes</li>
-        <li>Hypertension (High Blood Pressure)</li>
-        <li>High Cholesterol</li>
-        <li>HIV &amp; AIDS</li>
-        <li>Gout</li>
-        <li>Arthritis</li>
-        <li>Heart Disease</li>
-        <li>Lung Disease</li>
-        <li>Liver Disease</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Digestive Health &amp; Gastrointestinal Conditions</h2>
-      <p>Specialised nutrition support to improve digestive health and manage gastrointestinal disorders, including:</p>
-      <ul>
-        <li>Constipation</li>
-        <li>Diarrhoea</li>
-        <li>Irritable Bowel Syndrome (IBS)</li>
-        <li>Peptic Ulcers</li>
-        <li>Nausea and Vomiting</li>
-        <li>Poor Appetite</li>
-        <li>Food Allergies</li>
-        <li>Food Intolerances</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Maternal, Infant &amp; Child Nutrition</h2>
-      <p>Supporting mothers and children through every stage of growth and development:</p>
-      <ul>
-        <li>Preconception Nutrition</li>
-        <li>Pregnancy Nutrition</li>
-        <li>Postpartum Nutrition</li>
-        <li>Breastfeeding &amp; Lactation Support</li>
-        <li>Infant Feeding Guidance</li>
-        <li>Complementary Feeding</li>
-        <li>Infant &amp; Young Child Nutrition</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Weight Management</h2>
-      <p>Achieve your health goals with sustainable, practical nutrition strategies:</p>
-      <ul>
-        <li>Weight Loss Programmes</li>
-        <li>Weight Gain Support</li>
-        <li>Obesity Management</li>
-        <li>Healthy Lifestyle Coaching</li>
-        <li>Behaviour Change Counselling</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Sports &amp; Performance Nutrition</h2>
-      <p>Nutrition plans designed to optimise performance, recovery, and overall health:</p>
-      <ul>
-        <li>Sports Nutrition Assessment</li>
-        <li>Performance Meal Planning</li>
-        <li>Recovery Nutrition</li>
-        <li>Body Composition Goals</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Medical Nutrition Therapy</h2>
-      <p>Individualised nutrition care for a wide range of medical conditions:</p>
-      <ul>
-        <li>Anaemia Management</li>
-        <li>Tuberculosis (TB) Nutrition Support</li>
-        <li>Oncology Nutrition Support</li>
-        <li>Renal Nutrition Support</li>
-        <li>Hospital Inpatient Nutrition Care</li>
-        <li>Outpatient Nutrition Consultations</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Specialised Dietary Planning</h2>
-      <p>Personalised meal plans designed around your health conditions, preferences, and lifestyle:</p>
-      <ul>
-        <li>Individualised Meal Plans</li>
-        <li>Vegetarian Diet Planning</li>
-        <li>Vegan Diet Planning</li>
-        <li>Mental Health</li>
-        <li>Therapeutic Diets</li>
-        <li>Family Nutrition Plans</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="service-block">
-      <h2>Nutrition Counselling &amp; Wellness</h2>
-      <p>Empowering individuals and families to make informed nutrition choices:</p>
-      <ul>
-        <li>One-on-One Nutrition Counselling</li>
-        <li>Workplace Wellness Programmes</li>
-        <li>Nutrition Education</li>
-        <li>Healthy Eating Workshops</li>
-        <li>Preventive Health Nutrition</li>
-      </ul>
-    </div>
-
-    <hr />
-
-    <div class="what-to-expect">
-      <h2>What to Expect</h2>
-      <ul>
-        <li>Comprehensive Nutrition Assessment</li>
-        <li>Personalised Nutrition Care Plan</li>
-        <li>Practical Meal Planning</li>
-        <li>Ongoing Support &amp; Monitoring</li>
-        <li>Evidence-Based Recommendations</li>
-      </ul>
-      <p>Helping you achieve better health through personalised nutrition care. 🌿🍎🥗</p>
-    </div>
-
-  </div>
-
-</section>
-<section class="cta-banner">
-  <h2>Not sure which service is <em>right for you?</em></h2>
-  <p>Get in touch and I'll help you figure out the best fit for your needs and goals.</p>
-  <button class="btn-primary" onclick="showContactOptions()">Contact Me</button>
-
-</section>
-
-
-
-<section class="pricing-section">
-  <div style="text-align:center">
-    <div class="section-tag">— Pricing</div>
-    <h2 class="section-title">Simple, transparent pricing</h2>
-    <p class="section-sub" style="margin:0 auto;text-align:center">All consultations are conducted In Person. Medical aid claims are facilitated where applicable.</p>
-  </div>
-
-
-<div class="service-full-card">
-  <div class="sfc-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
-  <div class="sfc-content">
-    <h3>First Consultation</h3>
-    <p>
-      Includes:
-      <br>• Nutritional assessment (Body composition, dietary history and habits, and clinical signs)
-      <br>• Nutrition counselling and management
-      <br>• Personalised meal plan and diet sheet
-      <br>• Recipes
-      <br>• Goal and habit tracker
-    </p>
-    <div class="sfc-tags">
-      <span class="sfc-tag">60 minutes</span>
-      <span class="sfc-tag">In Person</span>
-      <span class="sfc-tag">All conditions</span>
-    </div>
-  </div>
-  <div class="sfc-price">
-    <div class="price-from">From</div>
-    <div class="price-val">R750</div>
-    <div class="price-period">per session</div>
-    <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="showContactOptions()">Book</button>
-  </div>
-</div>
-
-<div class="service-full-card">
-  <div class="sfc-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
-  <div class="sfc-content">
-    <h3>FOLLOW UP</h3>
-    <p>
-      Includes:
-      <br>• Body composition tracking
-      <br>• meal plan adjustments if needed
-      <br>• Habit and goal tracking
-      <br>• Coaching and support
-    </p>
-    <div class="sfc-tags">
-      <span class="sfc-tag">60 minutes</span>
-      <span class="sfc-tag">In Person</span>
-      <span class="sfc-tag">All conditions</span>
-    </div>
-  </div>
-  <div class="sfc-price">
-    <div class="price-from">From</div>
-    <div class="price-val">R400</div>
-    <div class="price-period">per session</div>
-    <button class="btn-primary" style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem" onclick="showContactOptions()">Book</button>
-  </div>
-</div>
-
-
-
-</section>
-
-<!-- ============================================================
-  STEP 1 — Paste this <style> block inside your existing <head>
-============================================================ -->
-<style>
-  /* ── Google Fonts (add to <head> if not already present) ──
-     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  */
-
-  :root {
-    --elpo-green-deep:   #1a5c3a;
-    --elpo-green-mid:    #2a7a4f;
-    --elpo-green-bright: #3aaa6e;
-    --elpo-green-light:  #d4f0e2;
-    --elpo-gold:         #c8a44a;
-    --elpo-off-white:    #f7f9f5;
-    --elpo-text-dark:    #1a2a1e;
-    --elpo-text-muted:   #5a7060;
-  }
-
-  /* ── Section wrapper ── */
-  .promos-section {
-    padding: 80px 20px 100px;
-    background:
-      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(58,170,110,.10) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 90% 80%, rgba(26,92,58,.08) 0%, transparent 60%),
-      var(--elpo-off-white);
-    position: relative;
-    overflow: hidden;
-    font-family: 'DM Sans', sans-serif;
-    color: var(--elpo-text-dark);
-  }
-  .promos-section *, .promos-section *::before, .promos-section *::after {
-    box-sizing: border-box;
-  }
-  .promos-section::before,
-  .promos-section::after {
-    content: '';
-    position: absolute;
-    border-radius: 50% 60% 40% 70% / 60% 40% 70% 50%;
-    opacity: .06;
-    background: var(--elpo-green-deep);
-    pointer-events: none;
-  }
-  .promos-section::before { width: 420px; height: 420px; top: -120px; left: -100px; }
-  .promos-section::after  { width: 360px; height: 360px; bottom: -100px; right: -80px; }
-
-  /* ── Header ── */
-  .promos-header {
-    text-align: center;
-    margin-bottom: 60px;
-    position: relative;
-  }
-  .promos-header .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-size: .78rem;
-    font-weight: 600;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--elpo-green-bright);
-    background: rgba(58,170,110,.12);
-    border: 1px solid rgba(58,170,110,.3);
-    padding: 6px 18px;
-    border-radius: 100px;
-    margin-bottom: 18px;
-  }
-  .promos-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 900;
-    line-height: 1.1;
-    color: var(--elpo-green-deep);
-    display: inline-block;
-    margin: 0;
-  }
-  .promos-header h2 span { color: var(--elpo-gold); font-style: italic; }
-  .promos-header h2::after {
-    content: '';
-    display: block;
-    height: 4px;
-    border-radius: 2px;
-    background: linear-gradient(90deg, var(--elpo-green-bright), var(--elpo-gold));
-    margin: 12px auto 0;
-    width: 0;
-    animation: elpoUnderline .9s .4s ease forwards;
-  }
-  @keyframes elpoUnderline { to { width: 60%; } }
-  .promos-header p {
-    margin-top: 18px;
-    color: var(--elpo-text-muted);
-    font-size: 1.05rem;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-  }
-
-  /* ── Card grid ── */
-  .promos-grid {
-    max-width: 960px;
-    margin: 0 auto;
-    display: grid;
-    gap: 36px;
-  }
-  .promo-card {
-    background: #fff;
-    border-radius: 24px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0 8px 40px rgba(26,92,58,.10), 0 2px 8px rgba(0,0,0,.05);
-    border: 1px solid rgba(58,170,110,.15);
-    transition: transform .35s ease, box-shadow .35s ease;
-    animation: elpoCardReveal .7s .2s both ease;
-  }
-  @keyframes elpoCardReveal {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .promo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(26,92,58,.16), 0 4px 12px rgba(0,0,0,.07);
-  }
-
-  /* Left info panel */
-  .card-info {
-    padding: 44px 40px 44px 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 28px;
-  }
-  .card-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--elpo-green-deep);
-    background: var(--elpo-green-light);
-    padding: 7px 14px;
-    border-radius: 100px;
-    width: fit-content;
-  }
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 700;
-    color: var(--elpo-green-deep);
-    line-height: 1.2;
-    margin: 16px 0 0;
-  }
-  .card-title em { font-style: italic; color: var(--elpo-green-mid); }
-
-  /* Checklist */
-  .features-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-  .features-list li { display: flex; align-items: flex-start; gap: 12px; font-size: .95rem; line-height: 1.4; }
-  .check-icon {
-    flex-shrink: 0;
-    width: 22px; height: 22px;
-    border-radius: 6px;
-    background: var(--elpo-green-deep);
-    display: flex; align-items: center; justify-content: center;
-    margin-top: 1px;
-  }
-  .check-icon svg { width: 12px; height: 12px; }
-
-  /* Suitable-for tags */
-  .suitable-wrap { display: flex; flex-direction: column; gap: 8px; }
-  .suitable-label { font-size: .78rem; font-weight: 600; color: var(--elpo-text-muted); letter-spacing: .1em; text-transform: uppercase; }
-  .suitable-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .elpo-tag {
-    font-size: .82rem; padding: 5px 13px; border-radius: 100px;
-    background: var(--elpo-off-white); border: 1px solid rgba(58,170,110,.3);
-    color: var(--elpo-green-deep); font-weight: 500;
-  }
-
-  /* CTA button */
-  .elpo-cta-btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: linear-gradient(135deg, var(--elpo-green-deep), var(--elpo-green-mid));
-    color: #fff;
-    font-size: .95rem; font-weight: 600;
-    padding: 15px 28px; border-radius: 14px;
-    border: none; cursor: pointer; text-decoration: none;
-    width: fit-content; letter-spacing: .02em;
-    transition: background .3s, transform .2s, box-shadow .3s;
-    box-shadow: 0 4px 16px rgba(26,92,58,.25);
-  }
-  .elpo-cta-btn:hover {
-    background: linear-gradient(135deg, var(--elpo-green-mid), var(--elpo-green-bright));
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(26,92,58,.35);
-  }
-  .elpo-cta-btn svg { width: 18px; height: 18px; transition: transform .25s; }
-  .elpo-cta-btn:hover svg { transform: translateX(4px); }
-
-  /* Right price panel */
-  .card-price-panel {
-    background: linear-gradient(160deg, var(--elpo-green-deep) 0%, #0e3d24 100%);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 24px; padding: 44px 32px;
-    position: relative; overflow: hidden;
-  }
-  .card-price-panel::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-  .weeks-badge {
-    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
-    border-radius: 100px; padding: 8px 20px;
-    font-size: .85rem; font-weight: 600; color: #fff;
-    letter-spacing: .08em; text-transform: uppercase; position: relative;
-  }
-  .price-wrap { text-align: center; position: relative; }
-  .price-label { font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 6px; }
-  .price-amount {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900;
-    color: var(--elpo-gold); line-height: 1;
-    text-shadow: 0 2px 20px rgba(200,164,74,.4);
-  }
-  .price-period { font-size: .85rem; color: rgba(255,255,255,.55); margin-top: 6px; }
-
-  /* Pulse ring */
-  .pulse-ring {
-    width: 120px; height: 120px; border-radius: 50%;
-    background: rgba(58,170,110,.15);
-    display: flex; align-items: center; justify-content: center;
-    position: relative;
-  }
-  .pulse-ring::before, .pulse-ring::after {
-    content: ''; position: absolute; border-radius: 50%;
-    border: 2px solid rgba(58,170,110,.3);
-    animation: elpoPulse 2.5s ease-out infinite;
-  }
-  .pulse-ring::after { animation-delay: 1.2s; }
-  @keyframes elpoPulse {
-    0%   { width: 80px;  height: 80px;  opacity: .8; }
-    100% { width: 160px; height: 160px; opacity: 0;  }
-  }
-  .leaf-icon { font-size: 2.4rem; position: relative; z-index: 1; }
-
-  /* Contact strip */
-  .contact-strip {
-    background: rgba(255,255,255,.08); border-top: 1px solid rgba(255,255,255,.12);
-    border-radius: 12px; padding: 16px 20px; width: 100%;
-    display: flex; flex-direction: column; gap: 8px; position: relative;
-  }
-  .contact-item {
-    display: flex; align-items: center; gap: 10px;
-    font-size: .82rem; color: rgba(255,255,255,.8);
-    text-decoration: none; transition: color .2s;
-  }
-  .contact-item:hover { color: #fff; }
-  .contact-item svg { opacity: .7; flex-shrink: 0; }
-
-  /* ── Responsive ── */
-  @media (max-width: 720px) {
-    .promo-card { grid-template-columns: 1fr; }
-    .card-price-panel { padding: 36px 28px; }
-    .card-info { padding: 32px 28px; }
-  }
-</style>
-
-
-<!-- ============================================================
-  STEP 2 — Paste this <section> wherever you want it in <body>
-============================================================ -->
-<section class="promos-section" id="specials">
-
-  <div class="promos-header">
-    <span class="eyebrow">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Limited Time Offer
-    </span>
-    <h2>Specials &amp; <span>Promotions</span></h2>
-    <p>Take the first step toward a healthier you with our expert-designed transformation programme.</p>
-  </div>
-
-  <div class="promos-grid">
-    <div class="promo-card">
-
-      <!-- LEFT: info -->
-      <div class="card-info">
-        <div>
-          <span class="card-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-            Elpo Dietitians
-          </span>
-          <h3 class="card-title">12 Weeks Body<br/><em>Transformation</em></h3>
-        </div>
-
-        <ul class="features-list">
-          <li>
-            <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
-            Nutritional Assessment &amp; Counselling
-          </li>
-          <li>
-            <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
-            Body Composition Tracking
-          </li>
-          <li>
-            <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
-            Personalised Meal Plans
-          </li>
-          <li>
-            <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
-            Weekly Support &amp; Coaching
-          </li>
-          <li>
-            <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
-            Habit &amp; Exercise Tracker
-          </li>
-        </ul>
-
-        <div class="suitable-wrap">
-          <span class="suitable-label">Suitable for</span>
-          <div class="suitable-tags">
-            <span class="elpo-tag">Weight Loss</span>
-            <span class="elpo-tag">Insulin Resistance &amp; Diabetes</span>
-            <span class="elpo-tag">PCOS &amp; Hormonal Balances</span>
-          </div>
-        </div>
-
-        <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
-          Book Now
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">
+      <div class="logo-circle">
+        <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo" />
       </div>
-
-      <!-- RIGHT: price -->
-      <div class="card-price-panel">
-        <span class="weeks-badge">⏱ 12 Week Programme</span>
-
-        <div class="pulse-ring">
-          <span class="leaf-icon">🌿</span>
-        </div>
-
-        <div class="price-wrap">
-          <div class="price-label">For Only</div>
-          <div class="price-amount">R1 799</div>
-          <div class="price-period">Full Programme</div>
-        </div>
-
-        <div class="contact-strip">
-          <a class="contact-item" href="tel:+27786862287">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            0786862287
-          </a>
-          <a class="contact-item" href="mailto:elpodietitians@gmail.com">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            elpodietitians@gmail.com
-          </a>
-          <span class="contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Kit Kat Plaza, Pretoria West – Suite 5
-          </span>
-        </div>
-      </div>
-
-    </div><!-- /.promo-card -->
-  </div><!-- /.promos-grid -->
-
-</section>
-
-
-<section class="cta-banner">
-  <h2>Ready to get started?</h2>
-  <p>Book your initial consultation and take the first step toward better health.</p>
-  <a href="../pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
-</section>
-
-
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-logo">
-        <div class="logo-circle" style="width:50px;height:50px">
-          <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo" style="width:100%;height:100%;object-fit:contain">
-        </div>
-        <span>ELPO Dietitian</span>
-      </div>
-      <p class="footer-desc">Evidence-based, compassionate nutrition support for adults across South Africa. Fully online, fully personalised.</p>
-      <p class="logo-tagline" style="margin-top:0.5rem;font-size:0.85rem">For good health & Long life</p>
+      <span class="logo-tagline">For good health & Long life</span>
     </div>
-    <div class="footer-col">
-      <h4>Pages</h4>
+    <button
+      class="nav-hamburger"
+      id="nav-hamburger"
+      onclick="toggleMobileNav()"
+      aria-label="Toggle menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="../index.html">Home</a>
       <a href="../pages/about.html">About</a>
-      <a href="../pages/services.html">Services</a>
+      <a href="../pages/services.html" class="nav-active">Services</a>
       <a href="../pages/blog.html">Blog</a>
-      <a href="../pages/resources.html">Resources</a>
-      <a href="../pages/contact.html">Contact</a>
+      <a href="#" onclick="showContactOptions();return false;" class="nav-cta"
+        >Book a Consult</a
+      >
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="../pages/services.html">WEIGHT MANAGEMENT</a>
-      <a href="../pages/services.html">CHRONIC DISEASES</a>
-      <a href="../pages/services.html">GI PROBLEMS</a>
-      <a href="../pages/services.html">MATERNAL MANAGEMENT</a>
-      <a href="../pages/services.html">OTHER SERVICES</a>
+  </nav>
+
+  <script src="../js/main.js"></script>
+
+  <!-- SERVICES HERO -->
+  <section class="services-page-hero">
+    <div class="section-tag">What I offer</div>
+    <h2 class="section-title">Services & Programs</h2>
+    <p class="section-sub">
+      Personalised nutrition support for every stage of your health journey. All
+      services are delivered online.
+    </p>
+  </section>
+
+  <!-- SERVICES FULL LIST -->
+  <section class="services-full">
+    <div class="services-sectionn">
+      <div class="services-headerr">
+        <h1>Our Services</h1>
+        <p>
+          At our practice, we provide evidence-based nutrition care tailored to
+          your individual health needs and lifestyle goals.
+        </p>
+      </div>
+
+      <div class="service-block">
+        <h2>Chronic Disease Management</h2>
+        <p>
+          Nutrition plays a key role in preventing and managing chronic
+          conditions. We offer personalised dietary guidance for:
+        </p>
+        <ul>
+          <li>Diabetes</li>
+          <li>Hypertension (High Blood Pressure)</li>
+          <li>High Cholesterol</li>
+          <li>HIV &amp; AIDS</li>
+          <li>Gout</li>
+          <li>Arthritis</li>
+          <li>Heart Disease</li>
+          <li>Lung Disease</li>
+          <li>Liver Disease</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Digestive Health &amp; Gastrointestinal Conditions</h2>
+        <p>
+          Specialised nutrition support to improve digestive health and manage
+          gastrointestinal disorders, including:
+        </p>
+        <ul>
+          <li>Constipation</li>
+          <li>Diarrhoea</li>
+          <li>Irritable Bowel Syndrome (IBS)</li>
+          <li>Peptic Ulcers</li>
+          <li>Nausea and Vomiting</li>
+          <li>Poor Appetite</li>
+          <li>Food Allergies</li>
+          <li>Food Intolerances</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Maternal, Infant &amp; Child Nutrition</h2>
+        <p>
+          Supporting mothers and children through every stage of growth and
+          development:
+        </p>
+        <ul>
+          <li>Preconception Nutrition</li>
+          <li>Pregnancy Nutrition</li>
+          <li>Postpartum Nutrition</li>
+          <li>Breastfeeding &amp; Lactation Support</li>
+          <li>Infant Feeding Guidance</li>
+          <li>Complementary Feeding</li>
+          <li>Infant &amp; Young Child Nutrition</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Weight Management</h2>
+        <p>
+          Achieve your health goals with sustainable, practical nutrition
+          strategies:
+        </p>
+        <ul>
+          <li>Weight Loss Programmes</li>
+          <li>Weight Gain Support</li>
+          <li>Obesity Management</li>
+          <li>Healthy Lifestyle Coaching</li>
+          <li>Behaviour Change Counselling</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Sports &amp; Performance Nutrition</h2>
+        <p>
+          Nutrition plans designed to optimise performance, recovery, and
+          overall health:
+        </p>
+        <ul>
+          <li>Sports Nutrition Assessment</li>
+          <li>Performance Meal Planning</li>
+          <li>Recovery Nutrition</li>
+          <li>Body Composition Goals</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Medical Nutrition Therapy</h2>
+        <p>
+          Individualised nutrition care for a wide range of medical conditions:
+        </p>
+        <ul>
+          <li>Anaemia Management</li>
+          <li>Tuberculosis (TB) Nutrition Support</li>
+          <li>Oncology Nutrition Support</li>
+          <li>Renal Nutrition Support</li>
+          <li>Hospital Inpatient Nutrition Care</li>
+          <li>Outpatient Nutrition Consultations</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Specialised Dietary Planning</h2>
+        <p>
+          Personalised meal plans designed around your health conditions,
+          preferences, and lifestyle:
+        </p>
+        <ul>
+          <li>Individualised Meal Plans</li>
+          <li>Vegetarian Diet Planning</li>
+          <li>Vegan Diet Planning</li>
+          <li>Mental Health</li>
+          <li>Therapeutic Diets</li>
+          <li>Family Nutrition Plans</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="service-block">
+        <h2>Nutrition Counselling &amp; Wellness</h2>
+        <p>
+          Empowering individuals and families to make informed nutrition
+          choices:
+        </p>
+        <ul>
+          <li>One-on-One Nutrition Counselling</li>
+          <li>Workplace Wellness Programmes</li>
+          <li>Nutrition Education</li>
+          <li>Healthy Eating Workshops</li>
+          <li>Preventive Health Nutrition</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="what-to-expect">
+        <h2>What to Expect</h2>
+        <ul>
+          <li>Comprehensive Nutrition Assessment</li>
+          <li>Personalised Nutrition Care Plan</li>
+          <li>Practical Meal Planning</li>
+          <li>Ongoing Support &amp; Monitoring</li>
+          <li>Evidence-Based Recommendations</li>
+        </ul>
+        <p>Helping you achieve better health through personalised nutrition care. 🌿🍎🥗</p>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a>elpodietitians@gmail.com</a>
-      <a>0786862287</a>
-      <a>Online — South Africa</a>
+  </section>
+
+  <!-- CTA BANNER (above pricing) -->
+  <section class="cta-banner">
+    <h2>Not sure which service is <em>right for you?</em></h2>
+    <p>Get in touch and I'll help you figure out the best fit for your needs and goals.</p>
+    <button class="btn-primary" onclick="showContactOptions()">Contact Me</button>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing-section">
+    <div style="text-align:center">
+      <div class="section-tag">— Pricing</div>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center">
+        All consultations are conducted In Person. Medical aid claims are
+        facilitated where applicable.
+      </p>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 ELPO Dietitian.</p>
-    <p>HPCSA Registered Dietitian</p>
-  </div>
-</footer>
+
+    <div class="service-full-card">
+      <div class="sfc-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+      <div class="sfc-content">
+        <h3>First Consultation</h3>
+        <p>
+          Includes:
+          <br />• Nutritional assessment (Body composition, dietary history and
+          habits, and clinical signs)
+          <br />• Nutrition counselling and management
+          <br />• Personalised meal plan and diet sheet
+          <br />• Recipes
+          <br />• Goal and habit tracker
+        </p>
+        <div class="sfc-tags">
+          <span class="sfc-tag">60 minutes</span>
+          <span class="sfc-tag">In Person</span>
+          <span class="sfc-tag">All conditions</span>
+        </div>
+      </div>
+      <div class="sfc-price">
+        <div class="price-from">From</div>
+        <div class="price-val">R750</div>
+        <div class="price-period">per session</div>
+        <button
+          class="btn-primary"
+          style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem"
+          onclick="showContactOptions()"
+        >
+          Book
+        </button>
+      </div>
+    </div>
+
+    <div class="service-full-card">
+      <div class="sfc-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+      <div class="sfc-content">
+        <h3>FOLLOW UP</h3>
+        <p>
+          Includes:
+          <br />• Body composition tracking
+          <br />• meal plan adjustments if needed
+          <br />• Habit and goal tracking
+          <br />• Coaching and support
+        </p>
+        <div class="sfc-tags">
+          <span class="sfc-tag">60 minutes</span>
+          <span class="sfc-tag">In Person</span>
+          <span class="sfc-tag">All conditions</span>
+        </div>
+      </div>
+      <div class="sfc-price">
+        <div class="price-from">From</div>
+        <div class="price-val">R400</div>
+        <div class="price-period">per session</div>
+        <button
+          class="btn-primary"
+          style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem"
+          onclick="showContactOptions()"
+        >
+          Book
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPECIALS & PROMOTIONS — (NEW SERVICE CARD ADDED BELOW)
+       ============================================================ -->
+  <section class="promos-section" id="specials">
+    <div class="promos-header">
+      <span class="eyebrow">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Limited Time Offer
+      </span>
+      <h2>Specials &amp; <span>Promotions</span></h2>
+      <p>Take the first step toward a healthier you with our expert-designed transformation programme.</p>
+    </div>
+
+    <div class="promos-grid">
+      <!-- CARD 1: 12 Weeks Body Transformation -->
+      <div class="promo-card">
+        <div class="card-info">
+          <div>
+            <span class="card-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              Elpo Dietitians
+            </span>
+            <h3 class="card-title">12 Weeks Body<br/><em>Transformation</em></h3>
+          </div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Nutritional Assessment &amp; Counselling
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Body Composition Tracking
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Personalised Meal Plans
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Weekly Support &amp; Coaching
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Habit &amp; Exercise Tracker
+            </li>
+          </ul>
+          <div class="suitable-wrap">
+            <span class="suitable-label">Suitable for</span>
+            <div class="suitable-tags">
+              <span class="elpo-tag">Weight Loss</span>
+              <span class="elpo-tag">Insulin Resistance &amp; Diabetes</span>
+              <span class="elpo-tag">PCOS &amp; Hormonal Balances</span>
+            </div>
+          </div>
+          <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
+            Book Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="card-price-panel">
+          <span class="weeks-badge">⏱ 12 Week Programme</span>
+          <div class="pulse-ring">
+            <span class="leaf-icon">🌿</span>
+          </div>
+          <div class="price-wrap">
+            <div class="price-label">For Only</div>
+            <div class="price-amount">R1 799</div>
+            <div class="price-period">Full Programme</div>
+          </div>
+          <div class="contact-strip">
+            <a class="contact-item" href="tel:+27786862287">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              0786862287
+            </a>
+            <a class="contact-item" href="mailto:elpodietitians@gmail.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              elpodietitians@gmail.com
+            </a>
+            <span class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kit Kat Plaza, Pretoria West – Suite 5
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           CARD 2: HEALTHY LIFESTYLE PACKAGE (NEW)
+           ========================================================= -->
+      <div class="promo-card">
+        <div class="card-info">
+          <div>
+            <span class="card-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              NEW
+            </span>
+            <h3 class="card-title">Healthy Lifestyle<br/><em>Package</em></h3>
+          </div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Initial Consultation &amp; Assessment
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Personalised Meal Plan
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Lunch Box Ideas
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Portion Control Education
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Healthy Recipes &amp; Shopping Guide
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="1.5,6 4.5,9 10.5,3"/></svg></span>
+              Follow-up Consultation
+            </li>
+          </ul>
+          <div class="suitable-wrap">
+            <span class="suitable-label">Suitable for</span>
+            <div class="suitable-tags">
+              <span class="elpo-tag">Healthy Habits</span>
+              <span class="elpo-tag">Weight Management</span>
+              <span class="elpo-tag">Everyday Wellness</span>
+            </div>
+          </div>
+          <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
+            Book Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="card-price-panel">
+          <span class="weeks-badge">🌱 Package</span>
+          <div class="pulse-ring">
+            <span class="leaf-icon">🥗</span>
+          </div>
+          <div class="price-wrap">
+            <div class="price-label">Investment</div>
+            <div class="price-amount">R999</div>
+            <div class="price-period">Includes 1 initial + 1 follow-up</div>
+          </div>
+          <div class="contact-strip">
+            <a class="contact-item" href="tel:+27786862287">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              0786862287
+            </a>
+            <a class="contact-item" href="mailto:elpodietitians@gmail.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              elpodietitians@gmail.com
+            </a>
+            <span class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kit Kat Plaza, Pretoria West – Suite 5
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOWER CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready to get started?</h2>
+    <p>Book your initial consultation and take the first step toward better health.</p>
+    <a href="../pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="logo-circle" style="width:50px;height:50px">
+            <img src="../Pictures/Logo.png" alt="ELPO Dietitian Logo" style="width:100%;height:100%;object-fit:contain" />
+          </div>
+          <span>ELPO Dietitian</span>
+        </div>
+        <p class="footer-desc">
+          Evidence-based, compassionate nutrition support for adults across South
+          Africa. Fully online, fully personalised.
+        </p>
+        <p class="logo-tagline" style="margin-top:0.5rem;font-size:0.85rem">
+          For good health & Long life
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="../index.html">Home</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/services.html">Services</a>
+        <a href="../pages/blog.html">Blog</a>
+        <a href="../pages/resources.html">Resources</a>
+        <a href="../pages/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="../pages/services.html">WEIGHT MANAGEMENT</a>
+        <a href="../pages/services.html">CHRONIC DISEASES</a>
+        <a href="../pages/services.html">GI PROBLEMS</a>
+        <a href="../pages/services.html">MATERNAL MANAGEMENT</a>
+        <a href="../pages/services.html">OTHER SERVICES</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a>elpodietitians@gmail.com</a>
+        <a>0786862287</a>
+        <a>Online — South Africa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ELPO Dietitian.</p>
+      <p>HPCSA Registered Dietitian</p>
+    </div>
+  </footer>
 
 </body>
 </html>
-      
-
-

@@ -16,7 +16,7 @@ body{
 }
 .about-img-wrap {
   width: 100%; aspect-ratio: 4/5;
-  background: #ffc0cb51;
+  background: rgba(106, 189, 106, 0.289);
   border-radius: 24px; overflow: hidden;
   position: relative;
   display: flex; align-items: center; justify-content: center;
@@ -61,7 +61,7 @@ body{
 }
 .value-card {
   padding: 2rem; border-radius: 20px;
-  background: white; border: 1px solid var(--border);
+  background: rgba(147, 254, 163, 0.789); border: 1px solid var(--border);
 }
 .value-card .val-icon { font-size: 2rem; margin-bottom: 1rem; }
 .value-card h3 {
@@ -696,7 +696,7 @@ background-position: center;}
 
 /* Social connect card (placed under CTAs) */
 .social-connect { padding: 2rem 0 3rem; text-align: center; }
-.social-card { max-width: 720px; margin: 0 auto; background: white; border-radius: 16px; padding: 1.2rem; border: 1px solid var(--border); }
+.social-card { max-width: 720px; margin: 0 auto; background: rgba(181, 252, 178, 0.697); border-radius: 16px; padding: 1.2rem; border: 1px solid var(--border); }
 .social-card-inner h3 { margin: 0 0 0.25rem; font-family: 'Cormorant Garamond', serif; color: var(--green-deep); }
 .social-card-inner p { margin: 0 0 0.8rem; color: var(--text-light); }
 .social-actions { display: flex; gap: 0.75rem; justify-content: center; }
@@ -704,6 +704,7 @@ background-position: center;}
 .social-btn i { font-size: 1.2rem; }
 .social-btn span { font-size: 0.95rem; }
 .social-btn.instagram { background: linear-gradient(90deg,#f58529,#de1f7a); }
+.social-btn.facebook { background: linear-gradient(90deg,#1877f2,#0b5ed7); }
 .social-btn.tiktok { background: linear-gradient(90deg,#00f2ea,#000000); }
 .social-btn:focus,.social-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
 
@@ -767,4 +768,427 @@ background-position: center;}
   .how-it-works-summary { padding: 1rem; margin: 1.25rem; }
   .how-it-works-summary .section-title { font-size: 1.25rem; }
   .how-it-works-summary .summary-steps li { font-size: 0.95rem; }
+}
+/* ============================================================
+   promos.css — Specials & Promotions Styles
+   ============================================================ */
+
+:root {
+  --elpo-green-deep: #1a5c3a;
+  --elpo-green-mid: #2a7a4f;
+  --elpo-green-bright: #3aaa6e;
+  --elpo-green-light: #d4f0e2;
+  --elpo-gold: #c8a44a;
+  --elpo-off-white: #f7f9f5;
+  --elpo-text-dark: #1a2a1e;
+  --elpo-text-muted: #5a7060;
+}
+
+.promos-section {
+  padding: 80px 20px 100px;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(58,170,110,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(26,92,58,.08) 0%, transparent 60%),
+    var(--elpo-off-white);
+  position: relative;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--elpo-text-dark);
+}
+
+.promos-section *,
+.promos-section *::before,
+.promos-section *::after {
+  box-sizing: border-box;
+}
+
+.promos-section::before,
+.promos-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50% 60% 40% 70% / 60% 40% 70% 50%;
+  opacity: .06;
+  background: var(--elpo-green-deep);
+  pointer-events: none;
+}
+
+.promos-section::before {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -100px;
+}
+
+.promos-section::after {
+  width: 360px;
+  height: 360px;
+  bottom: -100px;
+  right: -80px;
+}
+
+.promos-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.promos-header .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--elpo-green-bright);
+  background: rgba(58,170,110,.12);
+  border: 1px solid rgba(58,170,110,.3);
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.promos-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--elpo-green-deep);
+  display: inline-block;
+  margin: 0;
+}
+
+.promos-header h2 span {
+  color: var(--elpo-gold);
+  font-style: italic;
+}
+
+.promos-header h2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--elpo-green-bright), var(--elpo-gold));
+  margin: 12px auto 0;
+  width: 0;
+  animation: elpoUnderline .9s .4s ease forwards;
+}
+
+@keyframes elpoUnderline {
+  to { width: 60%; }
+}
+
+.promos-header p {
+  margin-top: 18px;
+  color: var(--elpo-text-muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.promos-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 36px;
+}
+
+.promo-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 8px 40px rgba(26,92,58,.10), 0 2px 8px rgba(0,0,0,.05);
+  border: 1px solid rgba(58,170,110,.15);
+  transition: transform .35s ease, box-shadow .35s ease;
+  animation: elpoCardReveal .7s .2s both ease;
+}
+
+@keyframes elpoCardReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.promo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(26,92,58,.16), 0 4px 12px rgba(0,0,0,.07);
+}
+
+.card-info {
+  padding: 44px 40px 44px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--elpo-green-deep);
+  background: var(--elpo-green-light);
+  padding: 7px 14px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--elpo-green-deep);
+  line-height: 1.2;
+  margin: 16px 0 0;
+}
+
+.card-title em {
+  font-style: italic;
+  color: var(--elpo-green-mid);
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--elpo-green-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.check-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.suitable-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suitable-label {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--elpo-text-muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.suitable-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.elpo-tag {
+  font-size: .82rem;
+  padding: 5px 13px;
+  border-radius: 100px;
+  background: var(--elpo-off-white);
+  border: 1px solid rgba(58,170,110,.3);
+  color: var(--elpo-green-deep);
+  font-weight: 500;
+}
+
+.elpo-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--elpo-green-deep), var(--elpo-green-mid));
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 600;
+  padding: 15px 28px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  letter-spacing: .02em;
+  transition: background .3s, transform .2s, box-shadow .3s;
+  box-shadow: 0 4px 16px rgba(26,92,58,.25);
+}
+
+.elpo-cta-btn:hover {
+  background: linear-gradient(135deg, var(--elpo-green-mid), var(--elpo-green-bright));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,92,58,.35);
+}
+
+.elpo-cta-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform .25s;
+}
+
+.elpo-cta-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.card-price-panel {
+  background: linear-gradient(160deg, var(--elpo-green-deep) 0%, #0e3d24 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 44px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-price-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.weeks-badge {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.price-wrap {
+  text-align: center;
+  position: relative;
+}
+
+.price-label {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 6px;
+}
+
+.price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--elpo-gold);
+  line-height: 1;
+  text-shadow: 0 2px 20px rgba(200,164,74,.4);
+}
+
+.price-period {
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+  margin-top: 6px;
+}
+
+.pulse-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(58,170,110,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pulse-ring::before,
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(58,170,110,.3);
+  animation: elpoPulse 2.5s ease-out infinite;
+}
+
+.pulse-ring::after {
+  animation-delay: 1.2s;
+}
+
+@keyframes elpoPulse {
+  0% { width: 80px; height: 80px; opacity: .8; }
+  100% { width: 160px; height: 160px; opacity: 0; }
+}
+
+.leaf-icon {
+  font-size: 2.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-strip {
+  background: rgba(255,255,255,.08);
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 16px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .82rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.contact-item:hover {
+  color: #fff;
+}
+
+.contact-item svg {
+  opacity: .7;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .promo-card {
+    grid-template-columns: 1fr;
+  }
+  .card-price-panel {
+    padding: 36px 28px;
+  }
+  .card-info {
+    padding: 32px 28px;
+  }
 }
