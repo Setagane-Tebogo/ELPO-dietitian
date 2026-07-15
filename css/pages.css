@@ -1011,7 +1011,7 @@ background-position: center;}
   font-size: .82rem;
   padding: 5px 13px;
   border-radius: 100px;
-  background: var(--elpo-off-white);
+  background: #fff;
   border: 1px solid rgba(58,170,110,.3);
   color: var(--elpo-green-deep);
   font-weight: 500;
@@ -1192,3 +1192,4 @@ background-position: center;}
     padding: 32px 28px;
   }
 }
+
