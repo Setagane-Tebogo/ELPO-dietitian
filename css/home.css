@@ -16,10 +16,12 @@ body{
   padding: 5rem 4rem 4rem 6rem;
   gap: 4rem;
   position: relative; overflow: hidden;
+  isolation: isolate;
   background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('../Pictures/HomeBackground.png');
   background-size: cover;
   margin-top: 0;
 }
+
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
   background: var(--green-mist); border: 1px solid var(--green-pale);
@@ -81,7 +83,7 @@ body{
   width: 100%; height: 100%;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 1rem;
-  background: rgba(137, 252, 137, 0.182); border-radius: 200px 200px 160px 160px;
+  background: rgba(0, 0, 0, 0.796); border-radius: 200px 200px 160px 160px;
 }
 .placeholder-icon {
   width: 120px; height: 120px; background: var(--green-pale);
