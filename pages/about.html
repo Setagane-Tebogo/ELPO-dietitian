@@ -30,7 +30,7 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     <a href="../pages/about.html" class="nav-active">About</a>
     <a href="../pages/services.html">Services</a>
     <a href="../pages/blog.html">Blog</a>
-    <a href="../pages/contact.html" class="nav-cta">Book a Consult</a>
+    <a href="#" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' }); return false;" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -58,7 +58,7 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     </div>
 
     <div style="margin-top:2rem">
-      <button class="btn-primary" onclick="window.location.href='contact.html#booking-form'">Book a Consultation</button>
+      <button class="btn-primary" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' }); return false;">Book a Consultation</button>
     </div>
   </div>
 </section>
