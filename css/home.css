@@ -13,13 +13,13 @@ body{
   min-height: calc(100vh - 80px);
   display: grid; grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 5rem 4rem 4rem 6rem;
+  padding: 0 4rem 4rem 6rem;
   gap: 4rem;
   position: relative; overflow: hidden;
   isolation: isolate;
   background-image: linear-gradient(rgba(32, 32, 32, 0.43), rgba(26, 65, 34, 0.366)), url('../Pictures/HomeBackground.png');
   background-size: cover;
-  margin-top: 0;
+  margin-top: -1.5%;
 }
 
 .hero-badge {
@@ -247,12 +247,15 @@ body{
   }
   .hero-btns {
     justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 0.8rem;
   }
   .hero .btn-primary,
   .hero .btn-secondary {
     padding: 0.65rem 1.2rem;
     font-size: 0.85rem;
+    margin: 0 auto;
   }
   .hero-stats {
     justify-content: center;
@@ -282,7 +285,7 @@ body{
     padding: 0.8rem 1rem;
     white-space: nowrap;
   }
-  /* Center buttons only on the index (home) page for small screens */
+  /* Center home page buttons on small screens */
   #page-home .btn-primary,
   #page-home .btn-secondary,
   #page-home .form-submit,
@@ -291,16 +294,14 @@ body{
     display: block;
     margin: 0.6rem auto;
   }
-  /* But keep the hero buttons left-aligned on all sizes */
+  /* Keep hero buttons grouped and centered on small home screens */
+  #page-home .hero-btns {
+    justify-content: center;
+  }
   #page-home .hero-btns .btn-primary,
   #page-home .hero-btns .btn-secondary {
     display: inline-block;
     margin: 0;
-  }
-  /* Keep the services-strip action on the left as well */
-  .services-strip .btn-secondary {
-    display: inline-block !important;
-    margin: 0 !important;
   }
   .float-icon { width: 32px; height: 32px; font-size: 1rem; }
   .float-text { font-size: 0.7rem; }

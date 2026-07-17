@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | ELPO Dietitian</title>
+  <title>Services | ELPO Dietitians</title>
   <meta
     name="description"
     content="Professional dietitian services focused on healthy eating, nutrition guidance, wellness plans, and personalized dietary support for a healthier lifestyle."
@@ -44,7 +44,7 @@
       <a href="../pages/about.html">About</a>
       <a href="../pages/services.html" class="nav-active">Services</a>
       <a href="../pages/blog.html">Blog</a>
-      <a href="#" onclick="showContactOptions();return false;" class="nav-cta"
+      <a href="#" onclick="openBookingForm();return false;" class="nav-cta"
         >Book a Consult</a
       >
     </div>
@@ -54,7 +54,7 @@
 
   <!-- SERVICES HERO -->
   <section class="services-page-hero">
-    <div class="section-tag">What I offer</div>
+    <div class="section-tag">What we offer</div>
     <h2 class="section-title">Services & Programs</h2>
     <p class="section-sub">
       Personalised nutrition support for every stage of your health journey. All
@@ -236,7 +236,7 @@
   <section class="cta-banner">
     <h2>Not sure which service is <em>right for you?</em></h2>
     <p>Get in touch and I'll help you figure out the best fit for your needs and goals.</p>
-    <button class="btn-primary" onclick="showContactOptions()">Contact Me</button>
+    <button class="btn-primary" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' });">Contact Us</button>
   </section>
 
   <!-- PRICING SECTION -->
@@ -276,7 +276,7 @@
         <button
           class="btn-primary"
           style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem"
-          onclick="showContactOptions()"
+          onclick="openBookingForm({ category: 'CHRONIC DISEASES', package: 'First Consultation', price: 'R750', message: 'I would like to book the First Consultation.' }); return false;"
         >
           Book
         </button>
@@ -307,7 +307,7 @@
         <button
           class="btn-primary"
           style="margin-top:0.8rem;font-size:0.8rem;padding:0.6rem 1.2rem"
-          onclick="showContactOptions()"
+          onclick="openBookingForm({ category: 'CHRONIC DISEASES', package: 'Follow Up Consultation', price: 'R400', message: 'I would like to book the Follow Up Consultation.' }); return false;"
         >
           Book
         </button>
@@ -322,7 +322,7 @@
     <div class="promos-header">
       <span class="eyebrow">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Limited Time Offer
+        Limited Time Offers
       </span>
       <h2>Specials &amp; <span>Promotions</span></h2>
       <p>Take the first step toward a healthier you with our expert-designed transformation programme.</p>
@@ -361,15 +361,7 @@
               Habit &amp; Exercise Tracker
             </li>
           </ul>
-          <div class="suitable-wrap">
-            <span class="suitable-label">Suitable for</span>
-            <div class="suitable-tags">
-              <span class="elpo-tag">Weight Loss</span>
-              <span class="elpo-tag">Insulin Resistance &amp; Diabetes</span>
-              <span class="elpo-tag">PCOS &amp; Hormonal Balances</span>
-            </div>
-          </div>
-          <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
+          <a class="elpo-cta-btn" href="#" onclick="openBookingForm({ category: 'SPECIALS', package: '12 Weeks Body Transformation', price: 'R1 799', message: 'I would like to book the 12 Weeks Body Transformation package.' }); return false;">
             Book Now
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -447,7 +439,7 @@
               <span class="elpo-tag">Everyday Wellness</span>
             </div>
           </div>
-          <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
+          <a class="elpo-cta-btn" href="#" onclick="openBookingForm({ category: 'SPECIALS', package: 'Healthy Lifestyle Package', price: 'R999', message: 'I would like to book the Healthy Lifestyle Package.' }); return false;">
             Book Now
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -513,12 +505,15 @@
           <div class="suitable-wrap">
             <span class="suitable-label">Suitable for</span>
             <div class="suitable-tags">
-              <span class="elpo-tag">Blood Sugar Management</span>
-              <span class="elpo-tag">Healthy Eating</span>
-              <span class="elpo-tag">Prevention</span>
+              <span class="elpo-tag">All types of diabetes</span>
+              <span class="elpo-tag">Uncontrolled Blood glucose levels</span>
+              <span class="elpo-tag">Newly diagnosed</span>
+              <span class="elpo-tag">Insulin resistance</span>
+              <span class="elpo-tag">PCOS</span>
+              <span class="elpo-tag">Prevention and management</span>
             </div>
           </div>
-          <a class="elpo-cta-btn" href="mailto:elpodietitians@gmail.com">
+          <a class="elpo-cta-btn" href="#" onclick="openBookingForm({ category: 'SPECIALS', package: 'Diabetes Care Package', price: 'R1 499', message: 'I would like to book the Diabetes Care Package.' }); return false;">
             Book Now
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -553,12 +548,7 @@
     </div>
   </section>
 
-  <!-- LOWER CTA BANNER -->
-  <section class="cta-banner">
-    <h2>Ready to get started?</h2>
-    <p>Book your initial consultation and take the first step toward better health.</p>
-    <a href="../pages/contact.html"><button class="btn-primary">Book a Consultation</button></a>
-  </section>
+  
 
   <!-- FOOTER -->
   <footer>

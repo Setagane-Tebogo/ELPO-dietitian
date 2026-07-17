@@ -64,6 +64,71 @@ function closeBookingIfOutside(e) {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBooking(); });
 
+function getContactPagePath() {
+  const path = window.location.pathname;
+  const base = path.includes('/pages/')
+    ? path.substring(0, path.lastIndexOf('/') + 1)
+    : path.substring(0, path.lastIndexOf('/') + 1) + 'pages/';
+  return base + 'contact.html';
+}
+
+function fillBookingFormFromQuery() {
+  const form = document.getElementById('booking-form');
+  if (!form) return;
+
+  const url = new URL(window.location.href);
+  const q = url.searchParams;
+  const serviceSelect = form.querySelector('[name="service"]');
+  const packageInput = document.getElementById('preferred-package');
+  const messageInput = form.querySelector('[name="message"]');
+
+  const desiredService = q.get('service') || q.get('category');
+  if (desiredService && serviceSelect) {
+    let option = Array.from(serviceSelect.options).find(o => o.value === desiredService || o.textContent.trim() === desiredService);
+    if (!option) {
+      option = document.createElement('option');
+      option.value = desiredService;
+      option.textContent = desiredService;
+      option.selected = true;
+      serviceSelect.prepend(option);
+    }
+    serviceSelect.value = option.value;
+  }
+
+  if (q.get('package') && packageInput) packageInput.value = q.get('package');
+  if (q.get('price')) {
+    const priceInput = document.getElementById('preferred-price');
+    if (priceInput) priceInput.value = q.get('price');
+  }
+
+  if (q.get('message') && messageInput) messageInput.value = q.get('message');
+}
+
+function openBookingForm(opts = {}) {
+  const params = new URLSearchParams();
+  if (opts.category) params.set('category', opts.category);
+  if (opts.service) params.set('service', opts.service);
+  if (opts.package) params.set('package', opts.package);
+  if (opts.price) params.set('price', opts.price);
+  if (opts.message) params.set('message', opts.message);
+
+  const contactPage = getContactPagePath();
+  const query = params.toString();
+  const target = contactPage + (query ? `?${query}` : '') + '#booking-form';
+
+  if (window.location.pathname.endsWith('/contact.html') || window.location.pathname.includes('/pages/contact.html')) {
+    if (query) {
+      window.history.replaceState(null, '', target);
+    }
+    fillBookingFormFromQuery();
+    const form = document.getElementById('booking-form');
+    if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  window.location.href = target;
+}
+
 /* ── Formspree Configuration ─────────────────
    Replace with your Formspree form ID.
    Sign up free at https://formspree.io
@@ -183,4 +248,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   const homeLink = document.querySelector('.nav-links a[data-page="home"]');
   if (homeLink) homeLink.classList.add('nav-active');
+
+  if (document.getElementById('booking-form')) {
+    fillBookingFormFromQuery();
+  }
 });

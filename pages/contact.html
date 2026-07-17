@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | ELPO Dietitian</title>
+  <title>Contact | ELPO Dietitians</title>
 
 
 <meta name="description"
@@ -82,7 +82,7 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     <h3>Book a Consultation</h3>
     <p class="sub">Complete the form below and I'll be in touch shortly.</p>
 
-    <form id="booking-form" action="https://formspree.io/f/xojpvebz" method="POST">
+    <form id="booking-form" action="https://formspree.io/f/xojpvebz" method="POST" onsubmit="event.preventDefault(); submitForm();">
       <div class="form-row">
         <div class="form-group"><label>First name</label><input type="text" name="firstname" placeholder="Jane" required></div>
         <div class="form-group"><label>Last name</label><input type="text" name="lastname" placeholder="Smith" required></div>
@@ -105,6 +105,8 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
           <option>MATERNAL MANAGEMENT</option>
           <option>OTHER SERVICES</option>
         </select>
+        <input type="hidden" id="preferred-package" name="package" value="">
+        <input type="hidden" id="preferred-price" name="price" value="">
       </div>
       <div class="form-group">
         <label>Medical aid scheme (if applicable)</label>
@@ -137,6 +139,9 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
       </div>
       <button type="submit" class="form-submit">Send Booking Request →</button>
     </form>
+    <div id="success-msg" class="form-success" style="display:none;margin-top:1rem;padding:1rem;border:1px solid #cde5d7;border-radius:12px;background:#f4fbf6;color:#145a32;">
+      Thank you! Your booking request has been sent. I will contact you soon.
+    </div>
   </div>
 </div>
 

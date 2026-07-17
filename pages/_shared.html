@@ -55,7 +55,8 @@
 <!-- =============================================
    _modal.html — Booking popup (goes before </body>)
    ============================================= -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeBookingIfOutside(event)">
+
+   <div class="modal-overlay" id="modal-overlay" onclick="closeBookingIfOutside(event)">
   <div class="modal">
     <div class="modal-header">
       <h3>Book a Consultation</h3>
@@ -63,25 +64,27 @@
     </div>
     <div id="modal-form">
       <div class="form-row">
-        <div class="form-group"><label>First name</label><input type="text" placeholder="Jane"></div>
-        <div class="form-group"><label>Last name</label><input type="text" placeholder="Smith"></div>
+        <div class="form-group"><label>First name</label><input type="text" name="firstname" placeholder="Jane"></div>
+        <div class="form-group"><label>Last name</label><input type="text" name="lastname" placeholder="Smith"></div>
       </div>
-      <div class="form-group"><label>Email address</label><input type="email" placeholder="jane@email.com"></div>
+      <div class="form-group"><label>Email address</label><input type="email" name="email" placeholder="jane@email.com"></div>
       <div class="form-group">
         <label>Service interested in</label>
-        <select>
+        <select name="service" id="modal-service-select">
           <option value="">Select a service...</option>
           <option>Initial Nutrition Consultation</option>
           <option>IBS Ease & Management Program</option>
           <option>Medical Aid Weight Management</option>
           <option>Discovery Vitality Consultation</option>
         </select>
+        <input type="hidden" id="modal-package" name="package" value="">
+        <input type="hidden" id="modal-price" name="price" value="">
       </div>
       <div class="form-group">
         <label>Your health goals</label>
-        <textarea placeholder="What would you like to work on?" style="min-height:80px"></textarea>
+        <textarea name="message" id="modal-message" placeholder="What would you like to work on?" style="min-height:80px"></textarea>
       </div>
-      <button class="form-submit" onclick="submitModal()">Send Request →</button>
+      <button type="button" class="form-submit" onclick="submitModal()">Send Request →</button>
     </div>
     <div class="success-msg" id="modal-success">
       <div class="s-icon">🌿</div>
