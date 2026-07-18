@@ -30,7 +30,7 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     <a href="../pages/about.html" class="nav-active">About</a>
     <a href="../pages/services.html">Services</a>
     <a href="../pages/blog.html">Blog</a>
-    <a href="#" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' }); return false;" class="nav-cta">Book a Consult</a>
+    <a href="#" onclick="openBookingForm({ message: 'Hello, I would like to enquire about your services.' }); return false;" class="nav-cta">Book a Consult</a>
   </div>
 </nav>
 
@@ -58,9 +58,12 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     </div>
 
     <div style="margin-top:2rem">
-      <button class="btn-primary" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' }); return false;">Book a Consultation</button>
+      <button class="btn-primary" onclick="openBookingForm({ message: 'Hello, I would like to enquire about your services.' }); return false;">Book a Consultation</button>
     </div>
+    
+    
   </div>
+  
 </section>
 <!-- Social follow card inserted below CTAs -->
 <section class="social-connect">
@@ -125,10 +128,14 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
   </div>
 </section>
 
+
+
 <section class="cta-banner">
-  <h2>Let's work <em>together</em></h2>
-  <p>Book your initial consultation and take the first step toward better health.</p>
-  <a href="../pages/contact.html"><button class="btn-primary">Get Started Today</button></a>
+   <section class="cta-banner">
+    <h2>Not sure where<em>to start?</em></h2>
+    <p>Get in touch and we will help you figure out the best fit for your needs and goals.</p>
+    <button class="btn-primary" onclick="showContactOptions({ message: 'Hello, I would like to enquire about your services.' });">Contact Us</button>
+  </section> 
 <div class="map-container">
     <h2>Find Us</h2>
     <a href="https://www.google.com/maps/dir/?api=1&destination=Kit+Kat+Centre+327+WF+Nkomo+Street+Pretoria+West" target="_blank" style="text-decoration: none;">
