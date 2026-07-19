@@ -222,7 +222,7 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
     const show = medicalAidSelect.value === 'Other';
     medicalAidOtherWrap.style.display = show ? 'block' : 'none';
     if(!show) medicalAidOtherInput.value = '';
-  }
+  } 
 
   const today = new Date();
   dateInput.min = today.toISOString().split('T')[0];

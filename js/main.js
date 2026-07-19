@@ -19,6 +19,7 @@ function closeMobileNav() {
   document.getElementById('nav-hamburger').classList.remove('open');
 }
 
+
 /* ── Page Navigation ─────────────────────────
    Switches visible page, updates active nav
    link, updates document title.
@@ -72,6 +73,43 @@ function getContactPagePath() {
   return base + 'contact.html';
 }
 
+function setServiceSelectionLock(serviceSelect, formEl, lockedValue) {
+  if (!serviceSelect) return;
+
+  const hiddenServiceInput = formEl
+    ? formEl.querySelector('input[type="hidden"][name="service"][data-locked-service]')
+    : null;
+
+  if (lockedValue) {
+    serviceSelect.disabled = true;
+    serviceSelect.setAttribute('aria-disabled', 'true');
+    serviceSelect.classList.add('service-locked');
+    serviceSelect.title = 'This service is fixed for your selected special package.';
+    serviceSelect.removeAttribute('name');
+
+    if (hiddenServiceInput) {
+      hiddenServiceInput.value = lockedValue;
+    } else {
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'service';
+      hiddenInput.value = lockedValue;
+      hiddenInput.dataset.lockedService = 'true';
+      formEl.appendChild(hiddenInput);
+    }
+  } else {
+    serviceSelect.disabled = false;
+    serviceSelect.removeAttribute('aria-disabled');
+    serviceSelect.classList.remove('service-locked');
+    serviceSelect.title = '';
+    serviceSelect.setAttribute('name', 'service');
+
+    if (hiddenServiceInput) {
+      hiddenServiceInput.remove();
+    }
+  }
+}
+
 function fillBookingFormFromQuery() {
   const form = document.getElementById('booking-form');
   if (!form) return;
@@ -89,7 +127,6 @@ function fillBookingFormFromQuery() {
 
   if (serviceSelect) {
     if (isSpecialBooking) {
-      serviceSelect.disabled = true;
       const specialValue = `SPECIAL SERVICE: ${packageName} - PRICE = ${packagePrice}`;
       let specialOption = Array.from(serviceSelect.options).find(o => o.value === specialValue);
       if (!specialOption) {
@@ -99,6 +136,7 @@ function fillBookingFormFromQuery() {
         serviceSelect.prepend(specialOption);
       }
       serviceSelect.value = specialValue;
+      setServiceSelectionLock(serviceSelect, form, specialValue);
     } else if (desiredService) {
       let option = Array.from(serviceSelect.options).find(o => o.value === desiredService || o.textContent.trim() === desiredService);
       if (!option) {
@@ -109,7 +147,9 @@ function fillBookingFormFromQuery() {
         serviceSelect.prepend(option);
       }
       serviceSelect.value = option.value;
-      serviceSelect.disabled = false;
+      setServiceSelectionLock(serviceSelect, form, null);
+    } else {
+      setServiceSelectionLock(serviceSelect, form, null);
     }
   }
 
