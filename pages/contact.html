@@ -97,28 +97,36 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
       </div>
       <div class="form-group">
         <label>Service interested in</label>
-        <select name="service" required>
+        <select id="service" name="service" required>
           <option value="">Select a service...</option>
-          <option>WEIGHT MANAGEMENT</option>
-          <option>CHRONIC DISEASES</option>
-          <option>GI PROBLEMS</option>
-          <option>MATERNAL MANAGEMENT</option>
-          <option>OTHER SERVICES</option>
+          <option value="WEIGHT MANAGEMENT">WEIGHT MANAGEMENT</option>
+          <option value="CHRONIC DISEASES">CHRONIC DISEASES</option>
+          <option value="GI PROBLEMS">GI PROBLEMS</option>
+          <option value="MATERNAL MANAGEMENT">MATERNAL MANAGEMENT</option>
+          <option value="OTHER SERVICES">OTHER SERVICES</option>
         </select>
+        <div id="service-other-wrap" style="display:none;margin-top:0.5rem;">
+          <label for="service_other">Please specify the service</label>
+          <input type="text" id="service_other" name="service_other" placeholder="Enter the service you need">
+        </div>
         <input type="hidden" id="preferred-package" name="package" value="">
         <input type="hidden" id="preferred-price" name="price" value="">
       </div>
       <div class="form-group">
         <label>Medical aid scheme (if applicable)</label>
-        <select name="medicalaid">
+        <select id="medicalaid" name="medicalaid">
           <option value="">None / Private pay</option>
-          <option>Discovery Health</option>
-          <option>SAMWUMED</option>
-          <option>Polmed</option>
-          <option>Fedhealth</option>
-          <option>Bonitas</option>
-          <option>Other</option>
+          <option value="Discovery Health">Discovery Health</option>
+          <option value="SAMWUMED">SAMWUMED</option>
+          <option value="Polmed">Polmed</option>
+          <option value="Fedhealth">Fedhealth</option>
+          <option value="Bonitas">Bonitas</option>
+          <option value="Other">Other</option>
         </select>
+        <div id="medicalaid-other-wrap" style="display:none;margin-top:0.5rem;">
+          <label for="medicalaid_other">Please specify medical aid</label>
+          <input type="text" id="medicalaid_other" name="medicalaid_other" placeholder="Enter medical aid name">
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -194,7 +202,27 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
   const dateInput = document.getElementById('appointment_date');
   const timeSelect = document.getElementById('appointment_time');
   const note = document.getElementById('hours-note');
+  const serviceSelect = document.getElementById('service');
+  const serviceOtherWrap = document.getElementById('service-other-wrap');
+  const serviceOtherInput = document.getElementById('service_other');
+  const medicalAidSelect = document.getElementById('medicalaid');
+  const medicalAidOtherWrap = document.getElementById('medicalaid-other-wrap');
+  const medicalAidOtherInput = document.getElementById('medicalaid_other');
   if(!dateInput || !timeSelect) return;
+
+  function toggleServiceOther(){
+    if(!serviceSelect || !serviceOtherWrap || !serviceOtherInput) return;
+    const show = !serviceSelect.disabled && serviceSelect.value === 'OTHER SERVICES';
+    serviceOtherWrap.style.display = show ? 'block' : 'none';
+    if(!show) serviceOtherInput.value = '';
+  }
+
+  function toggleMedicalAidOther(){
+    if(!medicalAidSelect || !medicalAidOtherWrap || !medicalAidOtherInput) return;
+    const show = medicalAidSelect.value === 'Other';
+    medicalAidOtherWrap.style.display = show ? 'block' : 'none';
+    if(!show) medicalAidOtherInput.value = '';
+  }
 
   const today = new Date();
   dateInput.min = today.toISOString().split('T')[0];
@@ -238,6 +266,16 @@ content="Professional dietitian services focused on healthy eating, nutrition gu
 
   dateInput.addEventListener('change', updateTimes);
   if(dateInput.value) updateTimes();
+
+  if(serviceSelect){
+    serviceSelect.addEventListener('change', toggleServiceOther);
+    toggleServiceOther();
+  }
+
+  if(medicalAidSelect){
+    medicalAidSelect.addEventListener('change', toggleMedicalAidOther);
+    toggleMedicalAidOther();
+  }
 })();
 </script>
 

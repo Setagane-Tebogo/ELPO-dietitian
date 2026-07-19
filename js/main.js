@@ -83,16 +83,34 @@ function fillBookingFormFromQuery() {
   const messageInput = form.querySelector('[name="message"]');
 
   const desiredService = q.get('service') || q.get('category');
-  if (desiredService && serviceSelect) {
-    let option = Array.from(serviceSelect.options).find(o => o.value === desiredService || o.textContent.trim() === desiredService);
-    if (!option) {
-      option = document.createElement('option');
-      option.value = desiredService;
-      option.textContent = desiredService;
-      option.selected = true;
-      serviceSelect.prepend(option);
+  const isSpecialBooking = (q.get('category') || '').toUpperCase().startsWith('SPECIALS');
+  const packageName = q.get('package') || '';
+  const packagePrice = q.get('price') || '';
+
+  if (serviceSelect) {
+    if (isSpecialBooking) {
+      serviceSelect.disabled = true;
+      const specialValue = `SPECIAL SERVICE: ${packageName} - PRICE = ${packagePrice}`;
+      let specialOption = Array.from(serviceSelect.options).find(o => o.value === specialValue);
+      if (!specialOption) {
+        specialOption = document.createElement('option');
+        specialOption.value = specialValue;
+        specialOption.textContent = specialValue;
+        serviceSelect.prepend(specialOption);
+      }
+      serviceSelect.value = specialValue;
+    } else if (desiredService) {
+      let option = Array.from(serviceSelect.options).find(o => o.value === desiredService || o.textContent.trim() === desiredService);
+      if (!option) {
+        option = document.createElement('option');
+        option.value = desiredService;
+        option.textContent = desiredService;
+        option.selected = true;
+        serviceSelect.prepend(option);
+      }
+      serviceSelect.value = option.value;
+      serviceSelect.disabled = false;
     }
-    serviceSelect.value = option.value;
   }
 
   if (q.get('package') && packageInput) packageInput.value = q.get('package');
@@ -127,6 +145,16 @@ function openBookingForm(opts = {}) {
   }
 
   window.location.href = target;
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.endsWith('/contact.html') || window.location.pathname.includes('/pages/contact.html')) {
+      fillBookingFormFromQuery();
+    }
+  });
+} else if (window.location.pathname.endsWith('/contact.html') || window.location.pathname.includes('/pages/contact.html')) {
+  fillBookingFormFromQuery();
 }
 
 /* ── Formspree Configuration ─────────────────
